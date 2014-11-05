@@ -22,9 +22,9 @@
                        <a href=\"/turbo-octo-stock/AdicionarPecas\"><u>Adicionar Peças</u></a>
                        " />
         </jsp:include>
-
-        <section class = "container">
-            <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        
+         <header>
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
@@ -32,13 +32,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="paginaInicial.jsp">Peças</a>
+                    <a class="navbar-brand" href="paginaInicial.jsp">Home</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Adicionar Peças</a></li>
+                        <li><a href="adicionarPecas.jsp">Adicionar Peças</a></li>
                         <li><a href="#">Remover Peças</a></li>
                         <li><a href="#">Alterar peças</a></li>
                         <li><a href="#">Consultar peças</a></li>
@@ -64,6 +64,10 @@
                 </div><!-- /.navbar-collapse -->
 
             </nav>
+    </header>
+
+        <section class = "container">
+            
         </section>
         
         <jsp:include page="WEB-INF/jspf/footer.jspf"></jsp:include>

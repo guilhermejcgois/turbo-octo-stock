@@ -3877,14 +3877,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     border-top-right-radius: 0;
 }
 .navbar {
+    margin-top: -20px;
     position: relative;
-    margin-top: -80px;
-    margin-left: -370px;
-    margin-right: -400px;
     min-height: 50px;
     margin-bottom: 20px;
     border: 1px solid transparent;
-    padding: -2px;
 }
 @media (min-width: 768px) {
     .navbar {

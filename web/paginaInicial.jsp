@@ -19,9 +19,9 @@
         <jsp:include page="WEB-INF/jspf/header.jsp">
             <jsp:param name="rastro" value="<a href=\"/turbo-octo-stock/Home\" ><u>Home</u></a>" />
         </jsp:include>
-
-        <section class = "container">
-            <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    
+    <header>
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
@@ -61,6 +61,10 @@
                 </div><!-- /.navbar-collapse -->
 
             </nav>
+    </header>
+
+        <section class = "container">
+            
         </section>
     
         <jsp:include page="WEB-INF/jspf/footer.jspf"></jsp:include>
