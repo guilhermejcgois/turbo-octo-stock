@@ -69,12 +69,14 @@
                 var login = document.getElementById('txtLogin');
                 var password = document.getElementById('txtPassword');
                 
-                $('txtLogin').keyUp(function() {
+                $('#txtLogin').keyup(function() {
                     var element = $(this);
-                    var so_letras = /^a-z/;
+                    var so_letras = /^[a-z]{5,16}$/;
                     
                     if (so_letras.test(element.val())) {
-                        
+                        $('#txtLogin').css("border-color", "#f00");
+                    } else {
+                        $('#txtLogin').css("border-color", "#0f0");
                     }
                 });
                 
