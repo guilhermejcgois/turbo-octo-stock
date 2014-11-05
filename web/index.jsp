@@ -10,8 +10,8 @@
         
         <link href="css/bootstrap.css" rel="stylesheet" media="screen" />
         <link rel="stylesheet" href="css/login.css" type="text/css">
-        <link rel="stylesheet" href="css/normalize.min.css" type="text/css">
-        <link rel="stylesheet" href="css/estilo.min.css" type="text/css">
+        <link rel="stylesheet" href="css/normalize.css" type="text/css">
+        <link rel="stylesheet" href="css/estilo.css" type="text/css">
         
         <!-- jQuery (plugins em JavaScript) -->
         <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>

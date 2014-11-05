@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 
         <link rel="stylesheet" href="css/bootstrap.css" media="screen" />
-        <link rel="stylesheet" href="css/Login.css" type="text/css">
+        <link rel="stylesheet" href="css/login.css" type="text/css">
         <link rel="stylesheet" href="css/normalize.min.css" type="text/css">
         <link rel="stylesheet" href="css/general.min.css" type="text/css">
 

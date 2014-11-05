@@ -22,3 +22,14 @@ header {
     background-color: #eee;
 }
 
+.campoInvalido {
+    border-color: red;
+}
+
+.textoCampoInvalido {
+    color: red !important;
+}
+
+.campoValido {
+    border-color: green;
+}
