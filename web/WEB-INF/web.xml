@@ -7,11 +7,19 @@
     <servlet>
         <servlet-name>EfetuaLogin</servlet-name>
         <servlet-class>controller.EfetuaLogin</servlet-class>
-    </servlet>    
+    </servlet>
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>Home</servlet-name>
+        <jsp-file>/paginaInicial.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>AdicionarPecasJSP</servlet-name>
+        <jsp-file>/adicionarPecas.jsp</jsp-file>
     </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
@@ -20,6 +28,14 @@
     <servlet-mapping>
         <servlet-name>EfetuaLogin</servlet-name>
         <url-pattern>/EfetuaLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/Home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdicionarPecasJSP</servlet-name>
+        <url-pattern>/AdicionarPecas</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

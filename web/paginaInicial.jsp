@@ -1,30 +1,24 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
         <title>Estoque de Pecas :: Home</title>
         <link rel="shortcut icon" href="img/favicon.ico" />
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 
-        <link rel="stylesheet" href="css/bootstrap.css" media="screen" />
-        <link rel="stylesheet" href="css/login.css" type="text/css">
-        <link rel="stylesheet" href="css/normalize.min.css" type="text/css">
-        <link rel="stylesheet" href="css/general.min.css" type="text/css">
+        <jsp:include page="WEB-INF/jspf/stylesheets.jspf"></jsp:include>
 
         <!-- jQuery (plugins em JavaScript) -->
         <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
     </head>
 
-    <body>
-        <div class="page-header" style="background-color: #eee">
-            <h1>ESTOQUE DE PEÇAS || IMAGEM AQUI</h1> 
-            <h2><small>Modulo de estoque</small></h2>
-            <small>LOGIN >> <a href="paginaInicial.jsp">HOME</a></small>
-        </div>
+    
+        <jsp:include page="WEB-INF/jspf/header.jsp">
+            <jsp:param name="rastro" value="<a href=\"/turbo-octo-stock/Home\" ><u>Home</u></a>" />
+        </jsp:include>
 
         <section class = "container">
             <nav class="navbar navbar-default navbar-static-top" role="navigation">
@@ -68,11 +62,7 @@
 
             </nav>
         </section>
-        <footer>
-            <div class="well well-sm">
-                <h5>Concessionárias BLA BLA</h5>
-                <a>tchurururu</a>
-            </div>
-        </footer>
+    
+        <jsp:include page="WEB-INF/jspf/footer.jspf"></jsp:include>
     </body>
 </html>

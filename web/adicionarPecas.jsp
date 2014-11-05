@@ -1,4 +1,3 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -9,10 +8,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 
-        <link rel="stylesheet" href="css/bootstrap.css" media="screen" />
-        <link rel="stylesheet" href="css/login.css" type="text/css">
-        <link rel="stylesheet" href="css/normalize.min.css" type="text/css">
-        <link rel="stylesheet" href="css/general.min.css" type="text/css">
+        <jsp:include page="WEB-INF/jspf/stylesheets.jspf"></jsp:include>
 
         <!-- jQuery (plugins em JavaScript) -->
         <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
@@ -20,11 +16,12 @@
     </head>
 
     <body>
-        <div class="page-header" style="background-color: #eee">
-            <h1>ESTOQUE DE PEÇAS || IMAGEM AQUI</h1> 
-            <h2><small>Modulo de estoque</small></h2>
-            <small>LOGIN >> <a href="paginaInicial.jsp">HOME</a> >> <a href="adicionarPecas.jsp"> ADICIONAR PEÇAS</a></small>
-        </div>
+        <jsp:include page="WEB-INF/jspf/header.jsp">
+            <jsp:param name="rastro" value="
+                       <a href=\"/turbo-octo-stock/Home\">Home</a> > 
+                       <a href=\"/turbo-octo-stock/AdicionarPecas\"><u>Adicionar Peças</u></a>
+                       " />
+        </jsp:include>
 
         <section class = "container">
             <nav class="navbar navbar-default navbar-static-top" role="navigation">
@@ -68,11 +65,7 @@
 
             </nav>
         </section>
-        <footer>
-            <div class="well well-sm">
-                <h5>Concessionárias BLA BLA</h5>
-                <a>tchurururu</a>
-            </div>
-        </footer>
+        
+        <jsp:include page="WEB-INF/jspf/footer.jspf"></jsp:include>
     </body>
 </html>
