@@ -8,12 +8,13 @@
 <html>
     <head>
         <title>Estoque de Pecas :: Login</title>
+        <link rel="shortcut icon" href="img/favicon.ico" />
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
         
         <link href="css/bootstrap.css" rel="stylesheet" media="screen" />
-        <link rel="stylesheet" href="css/login.css" type="text/css">
+        <link rel="stylesheet" href="css/Login.css" type="text/css">
         <link rel="stylesheet" href="css/normalize.min.css" type="text/css">
         <link rel="stylesheet" href="css/general.min.css" type="text/css">
         
@@ -26,7 +27,7 @@
         <header class="page-header">
             <h1>ESTOQUE DE PEÇAS || IMAGEM AQUI</h1> 
             <h2><small>Modulo de estoque</small></h2>
-            <small>Rastro</small>
+            <small>LOGIN</small>
         </header>
 
         <section class="container">
