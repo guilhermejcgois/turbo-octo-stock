@@ -23,7 +23,7 @@
         <div class="page-header" style="background-color: #eee">
             <h1>ESTOQUE DE PEÇAS || IMAGEM AQUI</h1> 
             <h2><small>Modulo de estoque</small></h2>
-            <small>LOGIN >> <a href="paginaInicial.jsp">HOME</a></small>
+            <small>LOGIN >> <a href="paginaInicial.jsp">HOME</a> >> <a href="adicionarPecas.jsp"> ADICIONAR PEÇAS</a></small>
         </div>
 
         <section class = "container">
@@ -35,13 +35,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="paginaInicial.jsp">Home</a>
+                    <a class="navbar-brand" href="paginaInicial.jsp">Peças</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="adicionarPecas.jsp">Adicionar Peças</a></li>
+                        <li class="active"><a href="#">Adicionar Peças</a></li>
                         <li><a href="#">Remover Peças</a></li>
                         <li><a href="#">Alterar peças</a></li>
                         <li><a href="#">Consultar peças</a></li>

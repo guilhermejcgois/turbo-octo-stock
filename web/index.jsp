@@ -1,8 +1,3 @@
-<%-- 
-    Document   : index
-    Author     : ggois
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -35,7 +30,7 @@
                 <div class="row">
                     <div class="login">
                         <h1>Acesso ao Sistema</h1>
-                        <form role="form" method="post" action="EfetuaLogin">
+                        <form role="form" method="post" action="paginaInicial.jsp">
                             <div class="form-group">
                                 <label for="txtLogin">Login</label>
                                 <p><input type="text" id="txtLogin" value="" placeholder="Login ou CPF"></p>

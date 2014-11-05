@@ -1,8 +1,4 @@
-<%-- 
-    Document   : newjsp
-    Created on : 04/11/2014, 21:51:28
-    Author     : ggois
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
