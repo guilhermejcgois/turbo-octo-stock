@@ -1,0 +1,24 @@
+/* 
+    Created on : 04/11/2014, 20:02:28
+    Author     : ggois
+*/
+
+body {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    min-height: 300px;
+}
+
+section.container {
+    height: -webkit-calc(100% - 27px - 1px);
+    height: -moz-calc(100% - 27px- 1px);
+    height: calc(100% - 27px  - 1px);
+}
+
+header {
+    background-color: #eee;
+}
+
