@@ -38,7 +38,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="adicionarPecas.jsp">Adicionar Peças</a></li>
+                        <li class="active"><a href="adicionarPecas.jsp">Adicionar Peças</a></li>
                         <li><a href="#">Remover Peças</a></li>
                         <li><a href="#">Alterar peças</a></li>
                         <li><a href="#">Consultar peças</a></li>
@@ -55,7 +55,7 @@
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
-                            <input type="text" class="form-control" style="width: 500px;" placeholder="Busca rápida de peças">
+                            <input type="text" class="form-control" style="width: 400px;" placeholder="Busca rápida de peças">
                             <button type="submit" class="btn btn-default">Buscar</button>    
                         </div>
                         

@@ -3990,6 +3990,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
     height: 50px;
     padding: 15px 15px;
+    padding-right: 20px;
     font-size: 18px;
     line-height: 20px;
 }
