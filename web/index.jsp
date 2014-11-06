@@ -4,18 +4,18 @@
     <head>
         <title>Estoque de Pecas :: Login</title>
         <link rel="shortcut icon" href="img/favicon.ico" />
-        
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-        
-        <jsp:include page="WEB-INF/jspf/stylesheets.jspf"></jsp:include>
-        
-        <!-- jQuery (plugins em JavaScript) -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    </head>
 
-    <body>
+        <jsp:include page="WEB-INF/jspf/stylesheets.jspf"></jsp:include>
+
+            <!-- jQuery (plugins em JavaScript) -->
+            <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+            <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        </head>
+
+        <body>
         <jsp:include page="WEB-INF/jspf/header.jsp">
             <jsp:param name="rastro" value="Login" />
         </jsp:include>
@@ -25,14 +25,14 @@
                 <div class="row">
                     <div class="login">
                         <h1>Acesso ao Sistema</h1>
-                        <form role="form" method="post" action="paginaInicial.jsp">
+                        <form role="form" method="post" action="EfetuaLogin">
                             <div class="form-group">
                                 <label for="txtLogin">Login
-                                    <input type="text" id="txtLogin" value="" placeholder="Login ou CPF">
+                                    <input type="text" id="txtLogin" name="login" value="" placeholder="Login ou CPF">
                                     <small id="errLogin"></small>
                                 </label>
                                 <label for="txtPassword">Senha
-                                    <input type="password" id="txtPassword" value="" placeholder="Senha">
+                                    <input type="password" id="txtPassword" name="password" value="" placeholder="Senha">
                                     <small id="errPassword"></small>
                                 </label>
                                 <p class="remember_me">
@@ -51,18 +51,18 @@
 
             </div>
         </section>
-        
+
         <jsp:include page="WEB-INF/jspf/footer.jspf"></jsp:include>
-        
+
         <script>
             $(document).ready(function () {
                 var login = document.getElementById('txtLogin');
                 var password = document.getElementById('txtPassword');
-                
+
                 $('#txtLogin').keyup(function () {
                     var element = $(this);
                     var so_letras = /^([a-z]{5,15})/;
-                    
+
                     if (element.val() === "") {
                         $('#txtLogin').removeClass("campoValido");
                         $('#txtLogin').addClass("campoInvalido");
@@ -86,16 +86,16 @@
                             $('#errLogin').html("O login deve conter menos de 15 caracteres!");
                         else
                             $('#errLogin').html("Login deve conter apenas letras minúsculas!");
-                        
+
                         var valor = element.val().replace(/[^a-z]/, '');
                         element.val(valor);
                     }
                 });
-                
+
                 $('#txtPassword').keyup(function () {
                     var element = $(this);
                     var so_letras = /^([a-z0-9]{8,15})/;
-                    
+
                     if (element.val() === "") {
                         $('#txtPassword').removeClass("campoValido");
                         $('#txtPassword').addClass("campoInvalido");
@@ -119,7 +119,7 @@
                             $('#errPassword').html("O login deve conter menos de 15 caracteres!");
                         else
                             $('#errPassword').html("A senha deve conter apenas letras minúsculas e números!");
-                        
+
                         var valor = element.val().replace(/[^a-z0-9]/, '');
                         element.val(valor);
                     }

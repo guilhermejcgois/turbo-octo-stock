@@ -3,9 +3,11 @@ package controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -65,7 +67,35 @@ public class EfetuaLogin extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        HttpSession session = request.getSession();
+        Cookie cookieLogin, cookieSenha;
+        
+        String login = request.getParameter("login");
+        String senha = request.getParameter("password");
+        boolean lembrar_me = Boolean.getBoolean(request.getParameter("remember_me"));
+        
+        if (login.equals("admin") && senha.equals("12345678")) {
+            session.setAttribute("login", login);
+            
+            if (lembrar_me) {
+                cookieLogin = new Cookie("LOGIN", login);
+                cookieLogin.setMaxAge(24 * 60 * 60);
+                cookieLogin.setSecure(true);
+                cookieLogin.setComment("Login do usuário.");
+                
+                cookieSenha = new Cookie("SENHA", senha);
+                cookieSenha.setMaxAge(24 * 60 * 60);
+                cookieSenha.setSecure(true);
+                cookieSenha.setComment("Senha do usuário.");
+                
+                response.addCookie(cookieLogin);
+                response.addCookie(cookieSenha);
+            }
+            
+            response.sendRedirect("Home");
+        } else {
+            
+        }
     }
 
     /**

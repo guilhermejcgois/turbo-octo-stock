@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Estoque de Pecas :: Home</title>
+        <title>Estoque de Pecas :: Adicionar Peças</title>
         <link rel="shortcut icon" href="img/favicon.ico" />
 
         <meta charset="UTF-8">
@@ -10,21 +10,21 @@
 
         <jsp:include page="WEB-INF/jspf/stylesheets.jspf"></jsp:include>
 
-        <!-- jQuery (plugins em JavaScript) -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    </head>
+            <!-- jQuery (plugins em JavaScript) -->
+            <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
+            <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        </head>
 
-    <body>
+        <body>
         <jsp:include page="WEB-INF/jspf/header.jsp">
             <jsp:param name="rastro" value="
                        <a href=\"/turbo-octo-stock/Home\">Home</a> > 
                        <a href=\"/turbo-octo-stock/AdicionarPecas\"><u>Adicionar Peças</u></a>
                        " />
         </jsp:include>
-        
-         <header>
-        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+
+        <header>
+            <nav class="navbar navbar-default navbar-static-top" role="navigation">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
@@ -58,18 +58,18 @@
                             <input type="text" class="form-control" style="width: 400px;" placeholder="Busca rápida de peças">
                             <button type="submit" class="btn btn-default">Buscar</button>    
                         </div>
-                        
+
                     </form>
 
                 </div><!-- /.navbar-collapse -->
 
             </nav>
-    </header>
+        </header>
 
         <section class = "container">
-            
+
         </section>
-        
+
         <jsp:include page="WEB-INF/jspf/footer.jspf"></jsp:include>
     </body>
 </html>
