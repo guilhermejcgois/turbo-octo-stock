@@ -1,6 +1,6 @@
 package model;
 
-public enum Disponibilidade {
+public enum DisponibilidadeEnum {
     
     DISPONIVEL,
     ENCOMENDA,
