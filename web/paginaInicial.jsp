@@ -16,6 +16,8 @@
         </head>
 
         <body>
+            <!-- Teste simples para saber se os cookies foram preservados. -->
+        <%= request.getCookies().length%>
         <jsp:include page="WEB-INF/jspf/header.jsp">
             <jsp:param name="rastro" value="<a href=\"/turbo-octo-stock/Home\" ><u>Home</u></a>" />
         </jsp:include>

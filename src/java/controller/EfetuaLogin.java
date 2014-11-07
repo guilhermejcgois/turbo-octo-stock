@@ -2,12 +2,14 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import model.UsuarioBean;
 
 /**
  *
@@ -67,15 +69,21 @@ public class EfetuaLogin extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession();
+        HttpSession session;
         Cookie cookieLogin, cookieSenha;
+        RequestDispatcher dispatcher;
         
         String login = request.getParameter("login");
-        String senha = request.getParameter("password");
+        String senha = request.getParameter("senha");
         boolean lembrar_me = Boolean.getBoolean(request.getParameter("remember_me"));
         
         if (login.equals("admin") && senha.equals("12345678")) {
-            session.setAttribute("login", login);
+            UsuarioBean usuarioBean = new UsuarioBean();
+            usuarioBean.setLogin(login);
+            usuarioBean.setSenha(senha);
+            
+            session = request.getSession();
+            session.setAttribute("USUARIO", usuarioBean);
             
             if (lembrar_me) {
                 cookieLogin = new Cookie("LOGIN", login);
@@ -92,9 +100,13 @@ public class EfetuaLogin extends HttpServlet {
                 response.addCookie(cookieSenha);
             }
             
-            response.sendRedirect("Home");
+            dispatcher = request.getRequestDispatcher("Home");
+            dispatcher.forward(request, response);
         } else {
+            request.setAttribute("mensagem", "Usuário ou senha inválidos.");
             
+            dispatcher = request.getRequestDispatcher("/index.jsp");
+            dispatcher.forward(request, response);
         }
     }
 

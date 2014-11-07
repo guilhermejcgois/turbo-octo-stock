@@ -4,8 +4,7 @@ public class FuncionarioBean implements java.io.Serializable {
     
     private String nome;
     private String cpf;
-    private String login;
-    private String senha;
+    private UsuarioBean usuario;
 
     /**
      * @return the nome
@@ -36,31 +35,17 @@ public class FuncionarioBean implements java.io.Serializable {
     }
 
     /**
-     * @return the login
+     * @return the usuario
      */
-    public String getLogin() {
-        return login;
+    public UsuarioBean getUsuario() {
+        return usuario;
     }
 
     /**
-     * @param login the login to set
+     * @param usuario the usuario to set
      */
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    /**
-     * @return the senha
-     */
-    public String getSenha() {
-        return senha;
-    }
-
-    /**
-     * @param senha the senha to set
-     */
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setUsuario(UsuarioBean usuario) {
+        this.usuario = usuario;
     }
 
 }

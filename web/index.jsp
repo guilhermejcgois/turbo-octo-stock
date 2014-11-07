@@ -21,19 +21,18 @@
         </jsp:include>
 
         <section class="container">
-            <div class="container">
                 <div class="row">
                     <div class="login">
                         <h1>Acesso ao Sistema</h1>
                         <form role="form" method="post" action="EfetuaLogin">
                             <div class="form-group">
-                                <label for="txtLogin">Login
-                                    <input type="text" id="txtLogin" name="login" value="" placeholder="Login ou CPF">
-                                    <small id="errLogin"></small>
+                                <label for="txtNomeUsuario">Login
+                                    <input type="text" id="txtNomeUsuario" name="login" placeholder="Usuário ou CPF">
+                                    <small id="errNomeUsuario"></small>
                                 </label>
-                                <label for="txtPassword">Senha
-                                    <input type="password" id="txtPassword" name="password" value="" placeholder="Senha">
-                                    <small id="errPassword"></small>
+                                <label for="txtSenhaUsuario">Senha
+                                    <input type="password" id="txtSenhaUsuario" name="senha" placeholder="Senha">
+                                    <small id="errSenhaUsuario"></small>
                                 </label>
                                 <p class="remember_me">
                                     <label><input type="checkbox" name="remember_me" id="remember_me">Lembre-me</label>
@@ -45,10 +44,13 @@
                             <p><a href="#">Esqueci minha senha.</a></p>
                             <p><a href="#">Cadastro de Acesso.</a></p>
                         </div>
+                        <%
+                            String mensagem = request.getParameter("mensagem");
+                            
+                            if (mensagem != null)
+                                out.println(mensagem);
+                        %>
                     </div>
-
-                </div>
-
             </div>
         </section>
 
@@ -56,69 +58,69 @@
 
         <script>
             $(document).ready(function () {
-                var login = document.getElementById('txtLogin');
-                var password = document.getElementById('txtPassword');
+                var usuario = document.getElementById('txtUsuario');
+                var password = document.getElementById('txtSenha');
 
-                $('#txtLogin').keyup(function () {
+                $('#txtNomeUsuario').keyup(function () {
                     var element = $(this);
                     var so_letras = /^([a-z]{5,15})/;
 
                     if (element.val() === "") {
-                        $('#txtLogin').removeClass("campoValido");
-                        $('#txtLogin').addClass("campoInvalido");
-                        $('#txtLogin').css({"border-color": "red"});
-                        $('#errLogin').addClass("textoCampoInvalido");
-                        $('#errLogin').html("Login vazio!");
+                        $('#txtNomeUsuario').removeClass("campoValido");
+                        $('#txtNomeUsuario').addClass("campoInvalido");
+                        $('#txtNomeUsuario').css({"border-color": "red"});
+                        $('#errNomeUsuario').addClass("textoCampoInvalido");
+                        $('#errNomeUsuario').html("Login vazio!");
                     } else if (so_letras.test(element.val()) && element.val().length <= 15) {
-                        $('#txtLogin').removeClass("campoInvalido");
-                        $('#txtLogin').addClass("campoValido");
-                        $('#txtLogin').css({"border-color": "green"});
-                        $('#errLogin').removeClass("textoCampoInvalido");
-                        $('#errLogin').html("");
+                        $('#txtNomeUsuario').removeClass("campoInvalido");
+                        $('#txtNomeUsuario').addClass("campoValido");
+                        $('#txtNomeUsuario').css({"border-color": "green"});
+                        $('#errNomeUsuario').removeClass("textoCampoInvalido");
+                        $('#errNomeUsuario').html("");
                     } else {
-                        $('#txtLogin').removeClass("campoValido");
-                        $('#txtLogin').addClass("campoInvalido");
-                        $('#txtLogin').css({"border-color": "red"});
-                        $('#errLogin').addClass("textoCampoInvalido");
+                        $('#txtNomeUsuario').removeClass("campoValido");
+                        $('#txtNomeUsuario').addClass("campoInvalido");
+                        $('#txtNomeUsuario').css({"border-color": "red"});
+                        $('#errNomeUsuario').addClass("textoCampoInvalido");
                         if (element.val().length < 5)
-                            $('#errLogin').html("O login deve conter mais de 5 caracteres!");
+                            $('#errNomeUsuario').html("O login deve conter mais de 5 caracteres!");
                         else if (element.val().length > 15)
-                            $('#errLogin').html("O login deve conter menos de 15 caracteres!");
+                            $('#errNomeUsuario').html("O login deve conter menos de 15 caracteres!");
                         else
-                            $('#errLogin').html("Login deve conter apenas letras minúsculas!");
+                            $('#errNomeUsuario').html("Login deve conter apenas letras minúsculas!");
 
                         var valor = element.val().replace(/[^a-z]/, '');
                         element.val(valor);
                     }
                 });
 
-                $('#txtPassword').keyup(function () {
+                $('#txtSenhaUsuario').keyup(function () {
                     var element = $(this);
                     var so_letras = /^([a-z0-9]{8,15})/;
 
                     if (element.val() === "") {
-                        $('#txtPassword').removeClass("campoValido");
-                        $('#txtPassword').addClass("campoInvalido");
-                        $('#txtPassword').css({"border-color": "red"});
-                        $('#errPassword').addClass("textoCampoInvalido");
-                        $('#errPassword').html("Senha vazia!");
+                        $('#txtSenhaUsuario').removeClass("campoValido");
+                        $('#txtSenhaUsuario').addClass("campoInvalido");
+                        $('#txtSenhaUsuario').css({"border-color": "red"});
+                        $('#errSenhaUsuario').addClass("textoCampoInvalido");
+                        $('#errSenhaUsuario').html("Senha vazia!");
                     } else if (so_letras.test(element.val()) && element.val().length <= 15) {
-                        $('#txtPassword').removeClass("campoInvalido");
-                        $('#txtPassword').addClass("campoValido");
-                        $('#txtPassword').css({"border-color": "green"});
-                        $('#errPassword').removeClass("textoCampoInvalido");
-                        $('#errPassword').html("");
+                        $('#txtSenhaUsuario').removeClass("campoInvalido");
+                        $('#txtSenhaUsuario').addClass("campoValido");
+                        $('#txtSenhaUsuario').css({"border-color": "green"});
+                        $('#errSenhaUsuario').removeClass("textoCampoInvalido");
+                        $('#errSenhaUsuario').html("");
                     } else {
-                        $('#txtPassword').removeClass("campoValido");
-                        $('#txtPassword').addClass("campoInvalido");
-                        $('#txtPassword').css({"border-color": "red"});
-                        $('#errPassword').addClass("textoCampoInvalido");
+                        $('#txtSenhaUsuario').removeClass("campoValido");
+                        $('#txtSenhaUsuario').addClass("campoInvalido");
+                        $('#txtSenhaUsuario').css({"border-color": "red"});
+                        $('#errSenhaUsuario').addClass("textoCampoInvalido");
                         if (element.val().length < 5)
-                            $('#errPassword').html("A senha deve conter mais de 8 caracteres!");
+                            $('#errSenhaUsuario').html("A senha deve conter mais de 8 caracteres!");
                         else if (element.val().length > 15)
-                            $('#errPassword').html("O login deve conter menos de 15 caracteres!");
+                            $('#errSenhaUsuario').html("O login deve conter menos de 15 caracteres!");
                         else
-                            $('#errPassword').html("A senha deve conter apenas letras minúsculas e números!");
+                            $('#errSenhaUsuario').html("A senha deve conter apenas letras minúsculas e números!");
 
                         var valor = element.val().replace(/[^a-z0-9]/, '');
                         element.val(valor);
