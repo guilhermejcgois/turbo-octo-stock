@@ -1,6 +1,6 @@
 CREATE DATABASE bdEstoque;
 
-USE DATABASE bdEstoque;
+/* USE DATABASE bdEstoque; */
 
 /* ==================== Categoria ==================== */
 
@@ -36,7 +36,7 @@ CREATE TABLE Peca (
     dimensao        decimal(3,1)        NULL,
     cod_categoria   int             NOT NULL,
     imagem          varchar(100)        NULL,
-    qtd_estoque     int             NOT NULL,
+    qtd_estoque     int             NOT NULL
 );
 
 ALTER TABLE Peca ADD CONSTRAINT pk_peca PRIMARY KEY (codigo);

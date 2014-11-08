@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Estoque de Pecas :: Adicionar Peças</title>
+        <title>Estoque de Peças :: Remover Peças</title>
         <link rel="shortcut icon" href="img/favicon.ico" />
 
         <meta charset="UTF-8">
@@ -14,12 +14,11 @@
             <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
             <script type="text/javascript" src="js/bootstrap.min.js"></script>
         </head>
-
         <body>
         <jsp:include page="WEB-INF/jspf/header.jsp">
             <jsp:param name="rastro" value="
                        <a href=\"/turbo-octo-stock/Home\">Home</a> > 
-                       <a href=\"/turbo-octo-stock/AdicionarPecas\"><u>Adicionar Peças</u></a>
+                       <a href=\"/turbo-octo-stock/RemoverPecas\"><u>Remover Peças</u></a>
                        " />
         </jsp:include>
 
@@ -38,8 +37,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="adicionarPecas.jsp">Adicionar Peças</a></li>
-                        <li><a href="removerPecas.jsp">Remover Peças</a></li>
+                        <li><a href="adicionarPecas.jsp">Adicionar Peças</a></li>
+                        <li class="active"><a href="removerPecas.jsp">Remover Peças</a></li>
                         <li><a href="alterarPecas.jsp">Alterar peças</a></li>
                         <li><a href="consultarPecas.jsp">Consultar peças</a></li>
                         <li class="dropdown">

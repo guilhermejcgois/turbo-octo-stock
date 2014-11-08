@@ -38,17 +38,17 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="adicionarPecas.jsp">Adicionar Peças</a></li>
-                        <li><a href="#">Remover Peças</a></li>
-                        <li><a href="#">Alterar peças</a></li>
-                        <li><a href="#">Consultar peças</a></li>
+                        <li><a href="removerPecas.jsp">Remover Peças</a></li>
+                        <li><a href="alterarPecas.jsp">Alterar peças</a></li>
+                        <li><a href="consultarPecas.jsp">Consultar peças</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Peças por Categoria <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Elétrica</a></li>
-                                <li><a href="#">Bateria</a></li>
-                                <li><a href="#">Mecânica</a></li>
+                                <li><a href="listarPecas.jsp?categoria=eletrica">Elétrica</a></li>
+                                <li><a href="listarPecas.jsp?categoria=bateria">Bateria</a></li>
+                                <li><a href="listarPecas.jsp?categoria=mecanica">Mecânica</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Acessorios</a></li>
+                                <li><a href="listarPecas.jsp?categoria=acessorio">Acessorios</a></li>
                             </ul>
                         </li>
                     </ul>
