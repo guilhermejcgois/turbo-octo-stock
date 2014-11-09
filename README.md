@@ -102,7 +102,10 @@ Será construída em um futuro próximo.
 
 ## Equipe
 
-** Daniel Valim **
-** Gabriela Martins **
-** Guilherme Gois **
-** Valdeir Perozim **
+**Daniel Valim**
+
+**Gabriela Martins**
+
+**Guilherme Gois**
+
+**Valdeir Perozim**
