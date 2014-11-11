@@ -2,31 +2,31 @@ CREATE DATABASE bdEstoque;
 
 /* USE DATABASE bdEstoque; */
 
-/* ==================== Categoria ==================== */
+/* ==================== tabCategoria ==================== */
 
-CREATE TABLE Categoria (
+CREATE TABLE tabCategoria (
     cod_categoria   int         NOT NULL,
     nome_categoria  varchar(30) NOT NULL
 );
 
-ALTER TABLE Categoria ADD CONSTRAINT pk_categoria PRIMARY KEY (cod_categoria);
+ALTER TABLE tabCategoria ADD CONSTRAINT pk_tabCategoria PRIMARY KEY (cod_categoria);
 
-ALTER TABLE Categoria ADD CONSTRAINT ck_categoria_nome_cateria UNIQUE;
+ALTER TABLE tabCategoria ADD CONSTRAINT ck_tabCategoria_nome_categoria UNIQUE;
 
-/* ==================== Fornecedor ==================== */
+/* ==================== tabFornecedor ==================== */
 
-CREATE TABLE Fornecedor (
+CREATE TABLE tabFornecedor (
     cod_fornecedor  int         NOT NULL,
     nome_fornecedor varchar(30) NOT NULL
 );
 
-ALTER TABLE Fornecedor ADD CONSTRAINT pk_fornecedor PRIMARY KEY (cod_fornecedor);
+ALTER TABLE tabFornecedor ADD CONSTRAINT pk_tabFornecedor PRIMARY KEY (cod_fornecedor);
 
-ALTER TABLE Fornecedor ADD CONSTRAINT ck_fornecedor_nome_fornecedor UNIQUE;
+ALTER TABLE tabFornecedor ADD CONSTRAINT ck_tabFornecedor_nome_fornecedor UNIQUE;
 
-/* ==================== Peca ==================== */
+/* ==================== tabPeca ==================== */
 
-CREATE TABLE Peca (
+CREATE TABLE tabPeca (
     codigo          int             NOT NULL,
     nome            varchar(30)     NOT NULL,
     cod_fornecedor  int             NOT NULL,
@@ -39,125 +39,125 @@ CREATE TABLE Peca (
     qtd_estoque     int             NOT NULL
 );
 
-ALTER TABLE Peca ADD CONSTRAINT pk_peca PRIMARY KEY (codigo);
+ALTER TABLE tabPeca ADD CONSTRAINT pk_tabPeca PRIMARY KEY (codigo);
 
-ALTER TABLE Peca ADD CONSTRAINT fk_peca_fornecedor FOREIGN KEY (cod_fornecedor) REFERENCES Fornecedor(cod_fornecedor);
+ALTER TABLE tabPeca ADD CONSTRAINT fk_tabPeca_tabFornecedor FOREIGN KEY (cod_fornecedor) REFERENCES tabFornecedor(cod_fornecedor);
 
-ALTER TABLE Peca ADD CONSTRAINT fk_peca_categoria FOREIGN KEY (cod_categoria) REFERENCES Categoria(cod_categoria);
+ALTER TABLE tabPeca ADD CONSTRAINT fk_tabPeca_tabCategoria FOREIGN KEY (cod_categoria) REFERENCES tabCategoria(cod_categoria);
 
-ALTER TABLE Peca ADD CONSTRAINT valor_peca_positivo CHECK (valor > 0);
+ALTER TABLE tabPeca ADD CONSTRAINT valor_tabPeca_positivo CHECK (valor > 0);
 
-ALTER TABLE Peca ADD CONSTRAINT dimensao_peca_positiva CHECK (dimensao > 0);
+ALTER TABLE tabPeca ADD CONSTRAINT dimensao_tabPeca_positiva CHECK (dimensao > 0);
 
-ALTER TABLE Peca ADD CONSTRAINT qtd_estoque_peca_nao_negativa CHECK (qtd_estoque >= 0);
+ALTER TABLE tabPeca ADD CONSTRAINT qtd_estoque_tabPeca_nao_negativa CHECK (qtd_estoque >= 0);
 
-/* ==================== Cliente ==================== */
+/* ==================== tabCliente ==================== */
 
-CREATE TABLE Cliente (
-    CPF     int         NOT NULL,
+CREATE TABLE tabCliente (
+    cpf     int         NOT NULL,
     nome    varchar(30) NOT NULL
 );
 
-ALTER TABLE Cliente ADD CONSTRAINT pk_cliente PRIMARY KEY (CPF);
+ALTER TABLE tabCliente ADD CONSTRAINT pk_tabCliente PRIMARY KEY (cpf);
 
-/* ==================== Modelo ==================== */
+/* ==================== tabModelo ==================== */
 
-CREATE TABLE Modelo (
+CREATE TABLE tabModelo (
     cod_modelo  int         NOT NULL,
     nome        varchar(30) NOT NULL,
     versao      varchar(30) NOT NULL
 );
 
-ALTER TABLE Modelo ADD CONSTRAINT pk_Modelo PRIMARY KEY (cod_modelo);
+ALTER TABLE tabModelo ADD CONSTRAINT pk_tabModelo PRIMARY KEY (cod_modelo);
 
-/* ==================== Veiculo ==================== */
+/* ==================== tabVeiculo ==================== */
 
-CREATE TABLE Veiculo (
+CREATE TABLE tabVeiculo (
     codigo      int NOT NULL,
     cod_modelo  int NOT NULL,
     ano         int NOT NULL
 );
 
-ALTER TABLE Veiculo ADD CONSTRAINT pk_veiculo PRIMARY KEY (codigo);
+ALTER TABLE tabVeiculo ADD CONSTRAINT pk_tabVeiculo PRIMARY KEY (codigo);
 
-ALTER TABLE Veiculo ADD CONSTRAINT fk_veiculo_modelo FOREIGN KEY (cod_modelo) REFERENCES Modelo(cod_modelo);
+ALTER TABLE tabVeiculo ADD CONSTRAINT fk_tabVeiculo_tabModelo FOREIGN KEY (cod_modelo) REFERENCES tabModelo(cod_modelo);
 
-/* ==================== Carro ==================== */
+/* ==================== tabCarro ==================== */
 
-CREATE TABLE Carro (
+CREATE TABLE tabCarro (
     placa       varchar(7)  NOT NULL,
     cpf_cliente int         NOT NULL,
     cod_veiculo int         NOT NULL
 );
 
-ALTER TABLE Carro ADD CONSTRAINT pk_carro PRIMARY KEY (placa);
+ALTER TABLE tabCarro ADD CONSTRAINT pk_tabCarro PRIMARY KEY (placa);
 
-ALTER TABLE Carro ADD CONSTRAINT fk_carro_cliente FOREIGN KEY (cpf_cliente) REFERENCES Cliente(CPF);
+ALTER TABLE tabCarro ADD CONSTRAINT fk_tabCarro_tabCliente FOREIGN KEY (cpf_cliente) REFERENCES tabCliente(cpf);
 
-ALTER TABLE Carro ADD CONSTRAINT fk_carro_veiculo FOREIGN KEY (cod_carro) REFERENCES Veiculo(codigo);
+ALTER TABLE tabCarro ADD CONSTRAINT fk_tabCarro_tabVeiculo FOREIGN KEY (cod_carro) REFERENCES tabVeiculo(codigo);
 
-/* ==================== Compativel ==================== */
+/* ==================== tabCompativel ==================== */
 
-CREATE TABLE Compativel (
+CREATE TABLE tabCompativel (
     cod_peca    int         NOT NULL,
     cod_carro   varchar(7)  NOT NULL
 );
 
-ALTER TABLE Compativel ADD CONSTRAINT pk_compativel PRIMARY KEY (cod_peca, cod_carro);
+ALTER TABLE Compativel ADD CONSTRAINT pk_tabCompativel PRIMARY KEY (cod_peca, cod_carro);
 
-ALTER TABLE Compativel ADD CONSTRAINT fk_compativel_peca FOREIGN KEY (cod_peca) REFERENCES Peca(codigo);
+ALTER TABLE Compativel ADD CONSTRAINT fk_tabCompativel_tabPeca FOREIGN KEY (cod_peca) REFERENCES tabPeca(codigo);
 
-ALTER TABLE Compativel ADD CONSTRAINT fk_compativel_carro FOREIGN KEY (cod_carro) REFERENCES Carro(placa);
+ALTER TABLE Compativel ADD CONSTRAINT fk_tabCompativel_tabCarro FOREIGN KEY (cod_carro) REFERENCES tabCarro(placa);
 
-/* ==================== FuncionarioCadastro ==================== */
+/* ==================== tabFuncionarioCadastro ==================== */
 
-CREATE TABLE FuncionarioCadastro (
-    CPF     int         NOT NULL,
+CREATE TABLE tabFuncionarioCadastro (
+    cpf     int         NOT NULL,
     nome    varchar(30) NOT NULL
 );
 
-ALTER TABLE FuncionarioCadastro ADD CONSTRAINT pk_funcionarioCadastro PRIMARY KEY (CPF);
+ALTER TABLE tabFuncionarioCadastro ADD CONSTRAINT pk_tabFuncionarioCadastro PRIMARY KEY (cpf);
 
-/* ==================== FuncionarioAcesso ==================== */
+/* ==================== tabFuncionarioAcesso ==================== */
 
-CREATE TABLE FuncionarioAcesso (
+CREATE TABLE tabFuncionarioAcesso (
     login   varchar(10) NOT NULL,
     senha   varchar(15) NOT NULL
 );
 
-ALTER TABLE FuncionarioAcesso ADD CONSTRAINT pk_funcionarioAcesso PRIMARY KEY (lofin);
+ALTER TABLE tabFuncionarioAcesso ADD CONSTRAINT pk_tabFuncionarioAcesso PRIMARY KEY (lofin);
 
-/* ==================== Funcionario ==================== */
+/* ==================== tabFuncionario ==================== */
 
-CREATE TABLE Funcionario (
+CREATE TABLE tabFuncionario (
     CPF     int         NOT NULL,
     login   varchar(10) NOT NULL
 );
 
-ALTER TABLE Funcionario ADD CONSTRAINT pk_funcionario PRIMARY KEY (CPF, login);
+ALTER TABLE tabFuncionario ADD CONSTRAINT pk_tabFuncionario PRIMARY KEY (cpf, login);
 
-/* ==================== EntradaEstoque ==================== */
+/* ==================== tabEntradaEstoque ==================== */
 
-CREATE TABLE EntradaEstoque (
-    CPF_funcionario int     NOT NULL,
+CREATE TABLE tabEntradaEstoque (
+    cpf_funcionario int     NOT NULL,
     cod_peca        int     NOT NULL,
     data            date    NOT NULL,
-    hora            time,
-    qtd             int
+    hora            time    NOT NULL,
+    qtd             int     NOT NULL
 );
 
-ALTER TABLE EntradaEstoque ADD CONSTRAINT pk_entradaEstoque PRIMARY KEY (CPF_funcionario, cod_peca, data);
+ALTER TABLE tabEntradaEstoque ADD CONSTRAINT pk_tabEntradaEstoque PRIMARY KEY (cpf_funcionario, cod_peca, data);
 
-ALTER TABLE EntradaEstoque ADD CONSTRAINT fk_entradaEstoque_funcionario FOREIGN KEY (CPF_funcionario) REFERENCES Funcionario(CPF);
+ALTER TABLE tabEntradaEstoque ADD CONSTRAINT fk_tabEntradaEstoque_funcionario FOREIGN KEY (CPF_funcionario) REFERENCES tabFuncionario(cpf);
 
-ALTER TABLE EntradaEstoque ADD CONSTRAINT fk_entradaEstoque_peca FOREIGN KEY (cod_peca) REFERENCES Peca(codigo);
+ALTER TABLE tabEntradaEstoque ADD CONSTRAINT fk_tabEntradaEstoque_peca FOREIGN KEY (cod_peca) REFERENCES tabPeca(codigo);
 
-ALTER TABLE EntradaEstoque ADD CONSTRAINT qtd_entradaEstoque_nao_negativa CHECK (qtd >= 0);
+ALTER TABLE tabEntradaEstoque ADD CONSTRAINT qtd_tabEntradaEstoque_nao_negativa CHECK (qtd >= 0);
 
-/* ==================== BaixaEstoque ==================== */
+/* ==================== tabBaixaEstoque ==================== */
 
-CREATE TABLE BaixaEstoque (
-    CPF_funcionario int         NOT NULL,
+CREATE TABLE tabBaixaEstoque (
+    cpf_funcionario int         NOT NULL,
     cod_peca        int         NOT NULL,
     placa_carro     varchar(7)  NOT NULL,
     data            date        NOT NULL,
@@ -165,27 +165,27 @@ CREATE TABLE BaixaEstoque (
     qtd             int
 );
 
-ALTER TABLE BaixaEstoque ADD CONSTRAINT pk_baixaEstoque PRIMARY KEY (CPF_funcionario, cod_peca, placa_carro, data, hora);
+ALTER TABLE tabBaixaEstoque ADD CONSTRAINT pk_tabBaixaEstoque PRIMARY KEY (cpf_funcionario, cod_peca, placa_carro, data, hora);
 
-ALTER TABLE BaixaEstoque ADD CONSTRAINT fk_baixaEstoque_funcionario FOREIGN KEY (CPF_funcionario) REFERENCES Funcionario(CPF);
+ALTER TABLE tabBaixaEstoque ADD CONSTRAINT fk_tabBaixaEstoque_funcionario FOREIGN KEY (cpf_funcionario) REFERENCES tabFuncionario(CPF);
 
-ALTER TABLE BaixaEstoque ADD CONSTRAINT fk_baixaEstoque_peca FOREIGN KEY (cod_peca) REFERENCES Peca(codigo);
+ALTER TABLE tabBaixaEstoque ADD CONSTRAINT fk_tabBaixaEstoque_peca FOREIGN KEY (cod_peca) REFERENCES tabPeca(codigo);
 
-ALTER TABLE BaixaEstoque ADD CONSTRAINT fk_baixaEstoque_carro FOREIGN KEY (placa_carro) REFERENCES Carro(placa);
+ALTER TABLE tabBaixaEstoque ADD CONSTRAINT fk_tabBaixaEstoque_carro FOREIGN KEY (placa_carro) REFERENCES tabCarro(placa);
 
-ALTER TABLE BaixaEstoque ADD CONSTRAINT qtd_entradaEstoque_nao_negativa CHECK (qtd >= 0);
+ALTER TABLE tabBaixaEstoque ADD CONSTRAINT qtd_tabBaixaEstoque_nao_negativa CHECK (qtd >= 0);
 
-/* ==================== PecaCarro ==================== */
+/* ==================== tabPecaCarro ==================== */
 
-CREATE TABLE PecaCarro (
+CREATE TABLE tabPecaCarro (
     placa_carro varchar(7)  NOT NULL,
     data_baixa  date        NOT NULL,
     hora_baixa  date        NOT NULL
 );
 
-ALTER TABLE PecaCarro ADD CONSTRAINT pk_pecaCarro PRIMARY KEY (placa_carro, data_baixa, hora_baixa);
+ALTER TABLE tabPecaCarro ADD CONSTRAINT pk_tabPecaCarro PRIMARY KEY (placa_carro, data_baixa, hora_baixa);
 
-ALTER TABLE PecaCarro ADD CONSTRAINT fk_pecaCarro_carro FOREIGN KEY placa_carro REFERENCES Carro(placa);
+ALTER TABLE tabPecaCarro ADD CONSTRAINT fk_tabPecaCarro_tabCarro FOREIGN KEY placa_carro REFERENCES tabCarro(placa);
 
-ALTER TABLE PecaCarro ADD CONSTRAINT fk_pecaCarro_baixaEstoque FOREIGN KEY (data_baixa, hora_baixa) REFERENCES BaixaEstoque(data, hora);
+ALTER TABLE tabPecaCarro ADD CONSTRAINT fk_tabPecaCarro_tabBaixaEstoque FOREIGN KEY (data_baixa, hora_baixa) REFERENCES tabBaixaEstoque(data, hora);
 
