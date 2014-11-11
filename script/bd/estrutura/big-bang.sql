@@ -136,6 +136,10 @@ CREATE TABLE tabFuncionario (
 
 ALTER TABLE tabFuncionario ADD CONSTRAINT pk_tabFuncionario PRIMARY KEY (cpf, login);
 
+ALTER TABLE tabFuncionario ADD CONSTRAINT fk_tabFuncionario_tabFuncionarioCadastro FOREIGN KEY (cpf) REFERENCES tabFuncionarioCadastro(cpf);
+
+ALTER TABLE tabFuncionario ADD CONSTRAINT fk_tabFuncionario_tabFuncionarioAcesso FOREIGN KEY (login) REFERENCES tabFuncionario(login);
+
 /* ==================== tabEntradaEstoque ==================== */
 
 CREATE TABLE tabEntradaEstoque (
@@ -148,7 +152,7 @@ CREATE TABLE tabEntradaEstoque (
 
 ALTER TABLE tabEntradaEstoque ADD CONSTRAINT pk_tabEntradaEstoque PRIMARY KEY (cpf_funcionario, cod_peca, data);
 
-ALTER TABLE tabEntradaEstoque ADD CONSTRAINT fk_tabEntradaEstoque_tabFuncionario FOREIGN KEY (CPF_funcionario) REFERENCES tabFuncionario(cpf);
+ALTER TABLE tabEntradaEstoque ADD CONSTRAINT fk_tabEntradaEstoque_tabFuncionario FOREIGN KEY (cpf_funcionario) REFERENCES tabFuncionario(cpf);
 
 ALTER TABLE tabEntradaEstoque ADD CONSTRAINT fk_tabEntradaEstoque_tabPeca FOREIGN KEY (cod_peca) REFERENCES tabPeca(codigo);
 
