@@ -117,4 +117,4 @@ Será construída em um futuro próximo.
 * JQuery: https://www.jquery.com
 * Netbeans: https://netbeans.org
 * Postgresql: https://www.postgresql.org
-* Twitter Bootstrap: getbootstrap.com
+* Twitter Bootstrap: http://getbootstrap.com
