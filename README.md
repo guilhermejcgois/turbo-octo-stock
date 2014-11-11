@@ -22,8 +22,9 @@ turbo-octo-stock/
 ├── script/
 │   └── bd/
 │       └── estrutura/
-│           ├── big-bang.sql
-│           └── big-crunch.sql
+│           │   big-bang.sql
+│           │   big-crunch.sql
+│           └── datagenese.sql
 ├── src/
 │   ├── conf/
 │   │   └── MANIFEST.MF
@@ -116,6 +117,9 @@ Será construída em um futuro próximo.
 
 ## Ferramentas
 
+* Catálogo de Fornecedores: http://www.baixecatalogo.com.br/index.asp
+* Gerador de CPFs: http://www.geradorcpf.com/
+* Gerador de Nomes: http://www.behindthename.com/random/
 * Java EE: https://www.oracle.com/technetwork/java/javaee/overview/index.html
 * JQuery: https://www.jquery.com
 * Netbeans: https://netbeans.org
