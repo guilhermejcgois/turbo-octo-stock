@@ -7,6 +7,7 @@ Projeto integrado do 4° perfil do curso Bacharel em Ciências da Computação d
   - [Estrutura do Projeto](#estrutura-do-projeto)
   - [Documentação](#documentacao)
   - [Equipe](#equipe)
+  - [Ferramentas](#ferramentas)
 
 ## Estrutura do Projeto
 
@@ -109,3 +110,11 @@ Será construída em um futuro próximo.
 **Guilherme Gois**
 
 **Valdeir Perozim**
+
+## Ferramentas
+
+* Java EE: https://www.oracle.com/technetwork/java/javaee/overview/index.html
+* JQuery: https://www.jquery.com
+* Netbeans: https://netbeans.org
+* Postgresql: https://www.postgresql.org
+* Twitter Bootstrap: getbootstrap.com
