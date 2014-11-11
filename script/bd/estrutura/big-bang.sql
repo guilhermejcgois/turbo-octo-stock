@@ -5,7 +5,7 @@ CREATE DATABASE bdEstoque;
 /* ==================== tabCategoria ==================== */
 
 CREATE TABLE tabCategoria (
-    cod_categoria   int         NOT NULL,
+    cod_categoria   int         NOT NULL SERIAL,
     nome_categoria  varchar(30) NOT NULL
 );
 
@@ -16,7 +16,7 @@ ALTER TABLE tabCategoria ADD CONSTRAINT ck_tabCategoria_nome_categoria UNIQUE;
 /* ==================== tabFornecedor ==================== */
 
 CREATE TABLE tabFornecedor (
-    cod_fornecedor  int         NOT NULL,
+    cod_fornecedor  int         NOT NULL SERIAL,
     nome_fornecedor varchar(30) NOT NULL
 );
 
@@ -27,7 +27,7 @@ ALTER TABLE tabFornecedor ADD CONSTRAINT ck_tabFornecedor_nome_fornecedor UNIQUE
 /* ==================== tabPeca ==================== */
 
 CREATE TABLE tabPeca (
-    codigo          int             NOT NULL,
+    codigo          int             NOT NULL SERIAL,
     nome            varchar(30)     NOT NULL,
     cod_fornecedor  int             NOT NULL,
     descricao       varchar(50)     NOT NULL,
@@ -54,7 +54,7 @@ ALTER TABLE tabPeca ADD CONSTRAINT qtd_estoque_tabPeca_nao_negativa CHECK (qtd_e
 /* ==================== tabCliente ==================== */
 
 CREATE TABLE tabCliente (
-    cpf     int         NOT NULL,
+    cpf     varchar(11) NOT NULL,
     nome    varchar(30) NOT NULL
 );
 
@@ -63,7 +63,7 @@ ALTER TABLE tabCliente ADD CONSTRAINT pk_tabCliente PRIMARY KEY (cpf);
 /* ==================== tabModelo ==================== */
 
 CREATE TABLE tabModelo (
-    cod_modelo  int         NOT NULL,
+    cod_modelo  int         NOT NULL SERIAL,
     nome        varchar(30) NOT NULL,
     versao      varchar(30) NOT NULL
 );
@@ -73,7 +73,7 @@ ALTER TABLE tabModelo ADD CONSTRAINT pk_tabModelo PRIMARY KEY (cod_modelo);
 /* ==================== tabVeiculo ==================== */
 
 CREATE TABLE tabVeiculo (
-    codigo      int NOT NULL,
+    codigo      int NOT NULL SERIAL,
     cod_modelo  int NOT NULL,
     ano         int NOT NULL
 );
@@ -86,7 +86,7 @@ ALTER TABLE tabVeiculo ADD CONSTRAINT fk_tabVeiculo_tabModelo FOREIGN KEY (cod_m
 
 CREATE TABLE tabCarro (
     placa       varchar(7)  NOT NULL,
-    cpf_cliente int         NOT NULL,
+    cpf_cliente varchar(11) NOT NULL,
     cod_veiculo int         NOT NULL
 );
 
@@ -112,7 +112,7 @@ ALTER TABLE Compativel ADD CONSTRAINT fk_tabCompativel_tabCarro FOREIGN KEY (cod
 /* ==================== tabFuncionarioCadastro ==================== */
 
 CREATE TABLE tabFuncionarioCadastro (
-    cpf     int         NOT NULL,
+    cpf     varchar(11) NOT NULL,
     nome    varchar(30) NOT NULL
 );
 
@@ -130,7 +130,7 @@ ALTER TABLE tabFuncionarioAcesso ADD CONSTRAINT pk_tabFuncionarioAcesso PRIMARY 
 /* ==================== tabFuncionario ==================== */
 
 CREATE TABLE tabFuncionario (
-    CPF     int         NOT NULL,
+    cpf     varchar(11) NOT NULL,
     login   varchar(10) NOT NULL
 );
 
@@ -143,11 +143,11 @@ ALTER TABLE tabFuncionario ADD CONSTRAINT fk_tabFuncionario_tabFuncionarioAcesso
 /* ==================== tabEntradaEstoque ==================== */
 
 CREATE TABLE tabEntradaEstoque (
-    cpf_funcionario int     NOT NULL,
-    cod_peca        int     NOT NULL,
-    data            date    NOT NULL,
-    hora            time    NOT NULL,
-    qtd             int     NOT NULL
+    cpf_funcionario varchar(11) NOT NULL,
+    cod_peca        int         NOT NULL,
+    data            date        NOT NULL,
+    hora            time        NOT NULL,
+    qtd             int         NOT NULL
 );
 
 ALTER TABLE tabEntradaEstoque ADD CONSTRAINT pk_tabEntradaEstoque PRIMARY KEY (cpf_funcionario, cod_peca, data);
@@ -161,7 +161,7 @@ ALTER TABLE tabEntradaEstoque ADD CONSTRAINT qtd_tabEntradaEstoque_nao_negativa 
 /* ==================== tabBaixaEstoque ==================== */
 
 CREATE TABLE tabBaixaEstoque (
-    cpf_funcionario int         NOT NULL,
+    cpf_funcionario varchar(11) NOT NULL,
     cod_peca        int         NOT NULL,
     placa_carro     varchar(7)  NOT NULL,
     data            date        NOT NULL,
