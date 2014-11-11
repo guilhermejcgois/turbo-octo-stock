@@ -148,9 +148,9 @@ CREATE TABLE tabEntradaEstoque (
 
 ALTER TABLE tabEntradaEstoque ADD CONSTRAINT pk_tabEntradaEstoque PRIMARY KEY (cpf_funcionario, cod_peca, data);
 
-ALTER TABLE tabEntradaEstoque ADD CONSTRAINT fk_tabEntradaEstoque_funcionario FOREIGN KEY (CPF_funcionario) REFERENCES tabFuncionario(cpf);
+ALTER TABLE tabEntradaEstoque ADD CONSTRAINT fk_tabEntradaEstoque_tabFuncionario FOREIGN KEY (CPF_funcionario) REFERENCES tabFuncionario(cpf);
 
-ALTER TABLE tabEntradaEstoque ADD CONSTRAINT fk_tabEntradaEstoque_peca FOREIGN KEY (cod_peca) REFERENCES tabPeca(codigo);
+ALTER TABLE tabEntradaEstoque ADD CONSTRAINT fk_tabEntradaEstoque_tabPeca FOREIGN KEY (cod_peca) REFERENCES tabPeca(codigo);
 
 ALTER TABLE tabEntradaEstoque ADD CONSTRAINT qtd_tabEntradaEstoque_nao_negativa CHECK (qtd >= 0);
 
@@ -167,11 +167,11 @@ CREATE TABLE tabBaixaEstoque (
 
 ALTER TABLE tabBaixaEstoque ADD CONSTRAINT pk_tabBaixaEstoque PRIMARY KEY (cpf_funcionario, cod_peca, placa_carro, data, hora);
 
-ALTER TABLE tabBaixaEstoque ADD CONSTRAINT fk_tabBaixaEstoque_funcionario FOREIGN KEY (cpf_funcionario) REFERENCES tabFuncionario(CPF);
+ALTER TABLE tabBaixaEstoque ADD CONSTRAINT fk_tabBaixaEstoque_tabFuncionario FOREIGN KEY (cpf_funcionario) REFERENCES tabFuncionario(CPF);
 
-ALTER TABLE tabBaixaEstoque ADD CONSTRAINT fk_tabBaixaEstoque_peca FOREIGN KEY (cod_peca) REFERENCES tabPeca(codigo);
+ALTER TABLE tabBaixaEstoque ADD CONSTRAINT fk_tabBaixaEstoque_tabPeca FOREIGN KEY (cod_peca) REFERENCES tabPeca(codigo);
 
-ALTER TABLE tabBaixaEstoque ADD CONSTRAINT fk_tabBaixaEstoque_carro FOREIGN KEY (placa_carro) REFERENCES tabCarro(placa);
+ALTER TABLE tabBaixaEstoque ADD CONSTRAINT fk_tabBaixaEstoque_tabCarro FOREIGN KEY (placa_carro) REFERENCES tabCarro(placa);
 
 ALTER TABLE tabBaixaEstoque ADD CONSTRAINT qtd_tabBaixaEstoque_nao_negativa CHECK (qtd >= 0);
 
