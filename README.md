@@ -19,6 +19,11 @@ turbo-octo-stock/
 │   │   genfiles.properties
 │   │   project.properties
 │   └── project.xml
+├── script/
+│   └── bd/
+│       └── estrutura/
+│           ├── big-bang.sql
+│           └── big-crunch.sql
 ├── src/
 │   ├── conf/
 │   │   └── MANIFEST.MF
@@ -92,9 +97,7 @@ turbo-octo-stock/
 │   └── removerPecas.jsp
 │   .gitignore
 │   README.md
-│   build.xml
-│   creational-script.sql
-└── drop-script.sql
+└── build.xml
 ```
 
 ## Documentação
