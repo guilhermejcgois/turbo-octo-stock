@@ -19,6 +19,12 @@ turbo-octo-stock/
 │   │   genfiles.properties
 │   │   project.properties
 │   └── project.xml
+├── script/
+│   └── bd/
+│       └── estrutura/
+│           │   big-bang.sql
+│           │   big-crunch.sql
+│           └── datagenese.sql
 ├── src/
 │   ├── conf/
 │   │   └── MANIFEST.MF
@@ -92,9 +98,7 @@ turbo-octo-stock/
 │   └── removerPecas.jsp
 │   .gitignore
 │   README.md
-│   build.xml
-│   creational-script.sql
-└── drop-script.sql
+└── build.xml
 ```
 
 ## Documentação
@@ -113,8 +117,11 @@ Será construída em um futuro próximo.
 
 ## Ferramentas
 
+* Catálogo de Fornecedores: http://www.baixecatalogo.com.br/index.asp
+* Gerador de CPFs: http://www.geradorcpf.com/
+* Gerador de Nomes: http://www.behindthename.com/random/
 * Java EE: https://www.oracle.com/technetwork/java/javaee/overview/index.html
 * JQuery: https://www.jquery.com
 * Netbeans: https://netbeans.org
 * Postgresql: https://www.postgresql.org
-* Twitter Bootstrap: getbootstrap.com
+* Twitter Bootstrap: http://getbootstrap.com
