@@ -5,8 +5,8 @@
         <param-value>Development</param-value>
     </context-param>
     <servlet>
-        <servlet-name>EfetuaLogin</servlet-name>
-        <servlet-class>controller.EfetuaLogin</servlet-class>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>controller.LoginController</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Faces Servlet</servlet-name>
@@ -21,13 +21,25 @@
         <servlet-name>AdicionarPecasJSP</servlet-name>
         <jsp-file>/adicionarPecas.jsp</jsp-file>
     </servlet>
+    <servlet>
+        <servlet-name>AlterarPecasJSP</servlet-name>
+        <jsp-file>/alterarPecas.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>ConsultarPecasJSP</servlet-name>
+        <jsp-file>/consultarPecas.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarPecasJSP</servlet-name>
+        <jsp-file>/listarPecas.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>RemoverPecasJSP</servlet-name>
+        <jsp-file>/removerPecas.jsp</jsp-file>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>EfetuaLogin</servlet-name>
-        <url-pattern>/EfetuaLogin</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Home</servlet-name>
@@ -36,6 +48,26 @@
     <servlet-mapping>
         <servlet-name>AdicionarPecasJSP</servlet-name>
         <url-pattern>/AdicionarPecas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarPecasJSP</servlet-name>
+        <url-pattern>/AlterarPecas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConsultarPecasJSP</servlet-name>
+        <url-pattern>/ConsultarPecas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarPecasJSP</servlet-name>
+        <url-pattern>/ListarPecas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoverPecasJSP</servlet-name>
+        <url-pattern>/RemoverPecas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/LoginController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -18,83 +18,12 @@
         <body>
             <!-- Teste simples para saber se os cookies foram preservados. -->
         <%= request.getCookies().length%>
-        <jsp:include page="WEB-INF/jspf/header.jsp">
-            <jsp:param name="rastro" value="<a href=\"/turbo-octo-stock/Home\" ><u>Home</u></a>" />
+        <jsp:include page="WEB-INF/jspf/header.jspf">
+            <jsp:param name="rastro" value="<a href=\"./Home\" ><u>Home</u></a>" />
         </jsp:include>
 
-        <header>
-            <nav class="navbar navbar-default navbar-static-top" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand " href="paginaInicial.jsp">Home</a> <!-- Colocar imagem na brand -->
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="adicionarPecas.jsp">Adicionar Peças</a></li>
-                        <li><a href="removerPecas.jsp">Remover Peças</a></li>
-                        <li><a href="alterarPecas.jsp">Alterar peças</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Consultar peças <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-
-                                <li><a href="#">Por código</a></li>
-                                <li><a href="#">Por nome + modelo </a></li>
-                                <li><a href="#">Por categoria + modelo</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Peças por Categoria <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="listarPecas.jsp?categoria=eletrica">Elétrica</a></li>
-                                <li><a href="listarPecas.jsp?categoria=bateria">Bateria</a></li>
-                                <li><a href="listarPecas.jsp?categoria=mecanica">Mecânica</a></li>
-                                <li><a href="#">Pneus e rodas</a></li>
-                                <li><a href="#">Suspensão</a></li>
-                                <li class="divider"></li>
-                                <li><a href="listarPecas.jsp?categoria=acessorio">Acessorios</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Movimenteção <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="entradaPecas.jsp">Entrada de peças</a></li>
-                                <li><a href="saidaPecas.jsp">Saída de peças</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Histórico<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="listarHistorico.jsp">Por Dia</a></li>
-                                <li><a href="listarHistorico.jsp">Por Mês</a></li>
-                                <li><a href="listarHistorico.jsp">Por Ano</a>
-                            </ul>
-                        </li>
-                      
-                        <li><a href="listarFucionarios.jsp">Funcionários</a></li>
-                            
-
-                    </ul>
-                    
-                    <form class="navbar-form navbar-left" role="search">
-                       
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Busca rápida por código">
-                            <button type="submit" class="btn btn-default">Buscar</button>    
-                        </div>
-
-                    </form>
-
-                </div><!-- /.navbar-collapse -->
-
-            </nav>
-        </header>
+        <jsp:include page="WEB-INF/jspf/menu.jspf"></jsp:include>
+            
         <section class="container" style="margin-top: -15px;margin-bottom: -225px;">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
@@ -165,19 +94,19 @@
             <div class="container marketing">
                 <div class="row">
                     <div class="col-lg-4">
-                        <a href="listarPecas.jsp?categoria=acessorio">
+                        <a href="./ListarPecas?categoria=ACESSORIO">
                             <img class="img-circle" src="img/acessorio.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                         </a>
                         <h2>Acessórios</h2>
                     </div>
                     <div class="col-lg-4">
-                        <a href="listarPecas.jsp?categoria=bateria">
+                        <a href="./ListarPecas?categoria=BATERIA">
                             <img class="img-circle" src="img/bateria.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                         </a>
                         <h2>Bateria</h2>
                     </div>
                     <div class="col-lg-4">
-                        <a href="listarPecas.jsp?categoria=eletrica">
+                        <a href="./ListarPecas?categoria=ELETRICA">
                             <img class="img-circle" src="img/eletrica.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                         </a>
                         <h2>Elétrica</h2>
@@ -186,19 +115,19 @@
 
                 <div class="row" style="margin-top: 50px;">
                     <div class="col-lg-4">
-                        <a href="listarPecas.jsp?categoria=mecanica">
+                        <a href="./ListarPecas?categoria=MECANICA">
                             <img class="img-circle" src="img/mecanica.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                         </a>
                         <h2>Mecânica</h2>
                     </div>
                     <div class="col-lg-4">
-                        <a href="#">
+                        <a href="./ListarPecas?categoria=PNEUS+RODAS">
                             <img class="img-circle" src="img/pneu.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
                         </a>
                         <h2>Pneus e rodas</h2>
                     </div>
                     <div class="col-lg-4">
-                        <a href="#">
+                        <a href="./ListarPecas?categoria=SUSPENSAO">
                             <img class="img-circle" src="img/suspensao.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">  
                         </a> 
                         <h2>Suspensão</h2>

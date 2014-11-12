@@ -15,7 +15,7 @@ import model.UsuarioBean;
  *
  * @author ggois
  */
-public class EfetuaLogin extends HttpServlet {
+public class LoginController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
