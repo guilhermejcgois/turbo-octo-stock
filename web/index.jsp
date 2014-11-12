@@ -16,7 +16,7 @@
         </head>
 
         <body>
-        <jsp:include page="WEB-INF/jspf/header.jsp">
+        <jsp:include page="WEB-INF/jspf/header.jspf">
             <jsp:param name="rastro" value="Login" />
         </jsp:include>
 
@@ -24,7 +24,7 @@
                 <div class="row">
                     <div class="login">
                         <h1>Acesso ao Sistema</h1>
-                        <form role="form" method="post" action="EfetuaLogin">
+                        <form role="form" method="post" action="LoginController">
                             <div class="form-group">
                                 <label for="txtNomeUsuario">Login       
                                     <input type="text" id="txtNomeUsuario" style="margin-left: 10px;"name="login" placeholder="Usuário ou CPF">
