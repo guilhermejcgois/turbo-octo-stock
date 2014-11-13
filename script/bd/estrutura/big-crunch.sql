@@ -1,127 +1,133 @@
 /* ==================== tabPecaCarro ==================== */
 
-DROP CONSTRAINT IF EXISTS fk_tabPecaCarro_tabBaixaEstoque;
+ALTER TABLE bdEstoque.tabPecaCarro DROP CONSTRAINT IF EXISTS  fk_tabPecaCarro_tabBaixaEstoque;
 
-DROP CONSTRAINT IF EXISTS fk_tabPecaCarro_tabCarro;
+ALTER TABLE bdEstoque.tabPecaCarro DROP CONSTRAINT IF EXISTS  fk_tabPecaCarro_tabCarro;
 
-DROP CONSTRAINT IF EXISTS pk_tabPecaCarro;
+ALTER TABLE bdEstoque.tabPecaCarro DROP CONSTRAINT IF EXISTS  pk_tabPecaCarro;
     
-DROP TABLE IF EXISTS tabPecaCarro;
+DROP TABLE IF EXISTS bdEstoque.tabPecaCarro;
 
 /* ==================== tabBaixaEstoque ==================== */
 
-DROP CONSTRAINT IF EXISTS qtd_tabBaixaEstoque_nao_negativa;
+ALTER TABLE bdEstoque.tabBaixaEstoque DROP CONSTRAINT IF EXISTS  qtd_tabBaixaEstoque_nao_negativa;
 
-DROP CONSTRAINT IF EXISTS fk_tabBaixaEstoque_tabCarro;
+ALTER TABLE bdEstoque.tabBaixaEstoque DROP CONSTRAINT IF EXISTS  fk_tabBaixaEstoque_tabCarro;
 
-DROP CONSTRAINT IF EXISTS fk_tabBaixaEstoque_tabPeca;
+ALTER TABLE bdEstoque.tabBaixaEstoque DROP CONSTRAINT IF EXISTS  fk_tabBaixaEstoque_tabPeca;
 
-DROP CONSTRAINT IF EXISTS fk_tabBaixaEstoque_tabFuncionario;
+ALTER TABLE bdEstoque.tabBaixaEstoque DROP CONSTRAINT IF EXISTS  fk_tabBaixaEstoque_tabFuncionario;
 
-DROP CONSTRAINT IF EXISTS pk_tabBaixaEstoque;
+ALTER TABLE bdEstoque.tabBaixaEstoque DROP CONSTRAINT IF EXISTS  pk_tabBaixaEstoque;
 
-DROP TABLE IF EXISTS tabBaixaEstoque;
+DROP TABLE IF EXISTS bdEstoque.tabBaixaEstoque;
 
 /* ==================== tabEntradaEstoque ==================== */
 
-DROP CONSTRAINT IF EXISTS qtd_tabEntradaEstoque_nao_negativa;
+ALTER TABLE bdEstoque.tabEntradaEstoque DROP CONSTRAINT IF EXISTS  qtd_tabEntradaEstoque_nao_negativa;
 
-DROP CONSTRAINT IF EXISTS fk_tabEntradaEstoque_tabPeca;
+ALTER TABLE bdEstoque.tabEntradaEstoque DROP CONSTRAINT IF EXISTS  fk_tabEntradaEstoque_tabPeca;
 
-DROP CONSTRAINT IF EXISTS fk_tabEntradaEstoque_tabFuncionario;
+ALTER TABLE bdEstoque.tabEntradaEstoque DROP CONSTRAINT IF EXISTS  fk_tabEntradaEstoque_tabFuncionario;
 
-DROP CONSTRAINT IF EXISTS pk_tabEntradaEstoque;
+ALTER TABLE bdEstoque.tabEntradaEstoque DROP CONSTRAINT IF EXISTS  pk_tabEntradaEstoque;
 
-DROP TABLE IF EXISTS tabEntradaEstoque;
+DROP TABLE IF EXISTS bdEstoque.tabEntradaEstoque;
 
 /* ==================== tabFuncionario ==================== */
 
-DROP CONSTRAINT IF EXISTS fk_tabFuncionario_tabFuncionarioCadastro;
+ALTER TABLE bdEstoque.tabFuncionario DROP CONSTRAINT IF EXISTS  fk_tabFuncionario_tabFuncionarioCadastro;
 
-DROP CONSTRAINT IF EXISTS fk_tabFuncionario_tabFuncionarioAcesso;
+ALTER TABLE bdEstoque.tabFuncionario DROP CONSTRAINT IF EXISTS  fk_tabFuncionario_tabFuncionarioAcesso;
 
-DROP CONSTRAINT IF EXISTS pk_tabFuncionario;
+ALTER TABLE bdEstoque.tabFuncionario DROP CONSTRAINT IF EXISTS  pk_tabFuncionario;
 
-DROP TABLE IF EXISTS tabFuncionario;
+DROP TABLE IF EXISTS bdEstoque.tabFuncionario;
 
 /* ==================== tabFuncionarioAcesso ==================== */
 
-DROP CONSTRAINT IF EXISTS pk_tabFuncionarioAcesso;
+ALTER TABLE bdEstoque.tabFuncionarioAcesso DROP CONSTRAINT IF EXISTS  pk_tabFuncionarioAcesso;
 
-DROP TABLE IF EXISTS tabFuncionarioAcesso;
+DROP TABLE IF EXISTS bdEstoque.tabFuncionarioAcesso;
 
 /* ==================== tabFuncionarioCadastro ==================== */
 
-DROP CONSTRAINT IF EXISTS pk_tabFuncionarioCadastro;
+ALTER TABLE bdEstoque.tabFuncionarioCadastro DROP CONSTRAINT IF EXISTS  pk_tabFuncionarioCadastro;
 
-DROP TABLE IF EXISTS tabFuncionarioCadastro;
+DROP TABLE IF EXISTS bdEstoque.tabFuncionarioCadastro;
 
 /* ==================== tabCompativel ==================== */
 
-DROP CONSTRAINT IF EXISTS fk_tabCompativel_tabCarro;
+ALTER TABLE bdEstoque.tabCompativel DROP CONSTRAINT IF EXISTS  fk_tabCompativel_tabCarro;
 
-DROP CONSTRAINT IF EXISTS fk_tabCompativel_tabPeca;
+ALTER TABLE bdEstoque.tabCompativel DROP CONSTRAINT IF EXISTS  fk_tabCompativel_tabPeca;
 
-DROP CONSTRAINT IF EXISTS pk_tabCompativel;
+ALTER TABLE bdEstoque.tabCompativel DROP CONSTRAINT IF EXISTS  pk_tabCompativel;
 
-DROP TABLE IF EXISTS tabCompativel;
+DROP TABLE IF EXISTS bdEstoque.tabCompativel;
 
 /* ==================== tabCarro ==================== */
 
-DROP CONSTRAINT IF EXISTS fk_tabCarro_tabVeiculo;
+ALTER TABLE bdEstoque.tabCarro DROP CONSTRAINT IF EXISTS  fk_tabCarro_tabVeiculo;
 
-DROP CONSTRAINT IF EXISTS fk_tabCarro_tabCliente;
+ALTER TABLE bdEstoque.tabCarro DROP CONSTRAINT IF EXISTS  fk_tabCarro_tabCliente;
 
-DROP CONSTRAINT IF EXISTS pk_tabCarro;
+ALTER TABLE bdEstoque.tabCarro DROP CONSTRAINT IF EXISTS  pk_tabCarro;
 
-DROP TABLE IF EXISTS tabCarro;
+DROP TABLE IF EXISTS bdEstoque.tabCarro;
 
 /* ==================== tabVeiculo ==================== */
 
-DROP CONSTRAINT IF EXISTS fk_tabVeiculo_tabModelo;
+ALTER TABLE bdEstoque.tabVeiculo DROP CONSTRAINT IF EXISTS  fk_tabVeiculo_tabModelo;
 
-DROP CONSTRAINT IF EXISTS pk_tabVeiculo;
+ALTER TABLE bdEstoque.tabVeiculo DROP CONSTRAINT IF EXISTS  pk_tabVeiculo;
 
-DROP TABLE IF EXISTS tabVeiculo;
+DROP TABLE IF EXISTS bdEstoque.tabVeiculo;
 
 /* ==================== tabModelo ==================== */
 
-DROP CONSTRAINT IF EXISTS pk_tabModelo;
+ALTER TABLE bdEstoque.tabModelo DROP CONSTRAINT IF EXISTS  pk_tabModelo;
 
-DROP TABLE IF EXISTS tabModelo;
+DROP TABLE IF EXISTS bdEstoque.tabModelo ;
 
 /* ==================== tabCliente ==================== */
 
-DROP CONSTRAINT IF EXISTS pk_tabCliente;
+ALTER TABLE bdEstoque.tabCliente DROP CONSTRAINT IF EXISTS  pk_tabCliente;
 
-DROP TABLE IF EXISTS tabCliente;
+DROP TABLE IF EXISTS bdEstoque.tabCliente;
 
 /* ==================== tabPeca ==================== */
 
-DROP CONSTRAINT IF EXISTS qtd_estoque_tabPeca_nao_negativa;
+ALTER TABLE bdEstoque.tabPeca DROP CONSTRAINT IF EXISTS  qtd_estoque_tabPeca_nao_negativa;
 
-DROP CONSTRAINT IF EXISTS dimensao_tabPeca_positiva;
+ALTER TABLE bdEstoque.tabPeca DROP CONSTRAINT IF EXISTS  dimensao_tabPeca_positiva;
 
-DROP CONSTRAINT IF EXISTS valor_tabPeca_positivo;
+ALTER TABLE bdEstoque.tabPeca DROP CONSTRAINT IF EXISTS  valor_tabPeca_positivo;
 
-DROP CONSTRAINT IF EXISTS fk_tabPeca_tabCategoria;
+ALTER TABLE bdEstoque.tabPeca DROP CONSTRAINT IF EXISTS  fk_tabPeca_tabCategoria;
 
-DROP CONSTRAINT IF EXISTS fk_tabPeca_tabFornecedor;
+ALTER TABLE bdEstoque.tabPeca DROP CONSTRAINT IF EXISTS  fk_tabPeca_tabFornecedor;
 
-DROP CONSTRAINT IF EXISTS pk_tabPeca;
+ALTER TABLE bdEstoque.tabPeca DROP CONSTRAINT IF EXISTS  pk_tabPeca;
 
-DROP TABLE IF EXISTS tabPeca;
+DROP TABLE IF EXISTS bdEstoque.tabPeca;
 
 /* ==================== tabFornecedor ==================== */
 
-DROP CONSTRAINT IF EXISTS ck_tabFornecedor_nome_fornecedor;
+ALTER TABLE bdEstoque.tabFornecedor DROP CONSTRAINT IF EXISTS  ck_tabFornecedor_nome_fornecedor;
 
-DROP CONSTRAINT IF EXISTS pk_tabFornecedor;
+ALTER TABLE bdEstoque.tabFornecedor DROP CONSTRAINT IF EXISTS  pk_tabFornecedor;
+
+DROP TABLE IF EXISTS bdEstoque.tabFornecedor;
 
 /* ==================== tabCategoria ==================== */
 
-DROP CONSTRAINT IF EXISTS ck_tabCategoria_nome_categoria;
+ALTER TABLE bdEstoque.tabCategoria DROP CONSTRAINT IF EXISTS  ck_tabCategoria_nome_categoria;
 
-DROP CONSTRAINT IF EXISTS pk_tabCategoria;
+ALTER TABLE bdEstoque.tabCategoria DROP CONSTRAINT IF EXISTS  pk_tabCategoria;
 
-DROP TABLE IF EXISTS tabCategoria;
+DROP TABLE IF EXISTS bdEstoque.tabCategoria;
+
+
+
+DROP SCHEMA IF EXISTS bdEstoque;
