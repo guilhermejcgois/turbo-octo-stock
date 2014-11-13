@@ -16,7 +16,7 @@
         </head>
 
         <body>
-        <jsp:include page="WEB-INF/jspf/header.jspf">
+        <jsp:include page="WEB-INF/jspf/header.jsp">
             <jsp:param name="rastro" value="
                        <a href=\"/turbo-octo-stock/Home\">Home</a> > 
                        <a href=\"/turbo-octo-stock/AdicionarPecas\"><u>Adicionar Peças</u></a>

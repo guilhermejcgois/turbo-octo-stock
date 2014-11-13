@@ -37,6 +37,26 @@
         <servlet-name>RemoverPecasJSP</servlet-name>
         <jsp-file>/removerPecas.jsp</jsp-file>
     </servlet>
+    <servlet>
+        <servlet-name>EntradaDePecasJSP</servlet-name>
+        <jsp-file>/entradaPecas.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>SaidaDePecasJSP</servlet-name>
+        <jsp-file>/saidaPecas.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarFuncionariosJSP</servlet-name>
+        <jsp-file>/listarFuncionarios.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarHistoricoJSP</servlet-name>
+        <jsp-file>/listarHistorico.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>ListarVeiculosJSP</servlet-name>
+        <jsp-file>/listarVeiculos.jsp</jsp-file>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -64,6 +84,26 @@
     <servlet-mapping>
         <servlet-name>RemoverPecasJSP</servlet-name>
         <url-pattern>/RemoverPecas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EntradaDePecasJSP</servlet-name>
+        <url-pattern>/EntradaDePecas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SaidaDePecasJSP</servlet-name>
+        <url-pattern>/SaidaDePecas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarFuncionariosJSP</servlet-name>
+        <url-pattern>/ListarFuncionarios</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarHistoricoJSP</servlet-name>
+        <url-pattern>/ListarHistorico</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListarVeiculosJSP</servlet-name>
+        <url-pattern>/ListarVeiculos</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>

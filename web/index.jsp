@@ -16,7 +16,7 @@
         </head>
 
         <body>
-        <jsp:include page="WEB-INF/jspf/header.jspf">
+        <jsp:include page="WEB-INF/jspf/header.jsp">
             <jsp:param name="rastro" value="Login" />
         </jsp:include>
 
