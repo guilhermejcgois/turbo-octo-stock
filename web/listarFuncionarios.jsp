@@ -1,8 +1,14 @@
+<%-- 
+    Document   : funcionarios
+    Created on : 11/11/2014, 09:50:04
+    Author     : Gabriela
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Estoque de Pecas :: Adicionar Peças</title>
+        <title>Estoque de Pecas :: Listar Funcionários</title>
         <link rel="shortcut icon" href="img/favicon.ico" />
 
         <meta charset="UTF-8">
@@ -14,12 +20,11 @@
             <script type="text/javascript" src="https://code.jquery.com/jquery.js"></script>
             <script type="text/javascript" src="js/bootstrap.min.js"></script>
         </head>
-
         <body>
         <jsp:include page="WEB-INF/jspf/header.jsp">
             <jsp:param name="rastro" value="
                        <a href=\"/turbo-octo-stock/Home\">Home</a> > 
-                       <a href=\"/turbo-octo-stock/AdicionarPecas\"><u>Adicionar Peças</u></a>
+                       <a href=\"/turbo-octo-stock/ListarFuncionarios\"><u>Listar Funcionários</u></a>
                        " />
         </jsp:include>
 
