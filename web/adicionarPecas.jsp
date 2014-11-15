@@ -33,20 +33,20 @@
                                 <div class="col-lg-12">
                                     <form>
                                         <div class="input-group">
-                                            <span class="input-group-addon">Código</span>
+                                            <span class="input-group-addon">Código*</span>
                                             <input type="text" class="form-control" style="width: 200px;" placeholder="Insira o código da peça">
-                                            <span class="input-group-addon">Nome</span>
+                                            <span class="input-group-addon">Nome*</span>
                                             <input type="text" class="form-control" style="width: 500px;" placeholder="Insira o nome da peça">
                                         </div>
                                 </div>
                                 <div class="col-lg-10" style="margin-top:40px;">
                                     <div class="input-group">
-                                        <span class="input-group-addon">Categoria</span>
+                                        <span class="input-group-addon">Categoria*</span>
                                         <input type="text" class="form-control" style="width: 200px;" placeholder="Insira a categoria da peça">
                                         <span class="input-group-addon">Modelo do veículo</span>
                                         <input type="text" class="form-control" style="width: 200px;" placeholder="Insira o modelo de veículo da peça">
 
-                                        <span class="input-group-addon">Valor</span>
+                                        <span class="input-group-addon">Valor*</span>
                                         <input type="text" class="form-control" style="width: 100px;" placeholder="Insira o valor da peça">
 
                                     </div>
@@ -83,8 +83,13 @@
                                     <button type="button" class="btn btn-default" style="color: #357ebd; background: #cde5ef;">Enviar</button>
                                
                                 </div>
+                                 
                                    </form>
-                                  
+                                    
+                                    <div class="col-lg-12">
+                                        * Itens obrigatórios
+                                    </div>
+                                 
                             </div>
                         </div>
                     </div>
