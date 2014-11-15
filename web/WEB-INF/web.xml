@@ -118,7 +118,43 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
     <error-page>
+        <error-code>400</error-code>
+        <location>/err/client/400.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/err/client/403.jsp</location>
+    </error-page>
+    <error-page>
         <error-code>404</error-code>
-        <location>/err/404.jsp</location>
+        <location>/err/client/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>405</error-code>
+        <location>/err/client/405.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>406</error-code>
+        <location>/err/client/406.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>408</error-code>
+        <location>/err/client/408.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/err/server/500.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>501</error-code>
+        <location>/err/server/501.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>503</error-code>
+        <location>/err/server/503.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>505</error-code>
+        <location>/err/server/505.jsp</location>
     </error-page>
 </web-app>
