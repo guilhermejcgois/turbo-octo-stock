@@ -24,8 +24,20 @@
 
         <jsp:include page="WEB-INF/jspf/menu.jspf"></jsp:include>
 
-        <section class = "container">
-
+        <section class = "container"style="margin-top: 10px;">
+            <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Coloque o código da peça</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" style="width: 400px;" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Pesquisar</button>
+                        </form>
+                    </div>
+                </div>
         </section>
 
         <jsp:include page="WEB-INF/jspf/footer.jspf"></jsp:include>
