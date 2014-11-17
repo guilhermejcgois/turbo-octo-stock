@@ -30,6 +30,16 @@
             %>
            <jsp:include page="WEB-INF/jspf/consulta/consultaCodigo.jsp"></jsp:include>     
         <%}%>
+        <%
+        if(tipoConsulta.equals("NOMEMODELO")){
+            %>
+          <jsp:include page="WEB-INF/jspf/consulta/consultaNomeModelo.jsp"></jsp:include>
+        <%}%>
+        <%
+        if(tipoConsulta.equals("CATEGORIAMODELO")){
+            %>
+          <jsp:include page="WEB-INF/jspf/consulta/consultaCategoriaModelo.jsp"></jsp:include>
+          <%}%>
        
     </section>
 
