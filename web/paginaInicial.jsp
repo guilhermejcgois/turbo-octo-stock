@@ -22,7 +22,7 @@
 
         <jsp:include page="WEB-INF/jspf/menu.jspf"></jsp:include>
 
-            <section class="container" style="margin-top: -15px;margin-bottom: -225px;">
+            <section class="container">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
                     <!-- Indicações -->
