@@ -24,10 +24,17 @@
 
     <jsp:include page="WEB-INF/jspf/menu.jspf"></jsp:include>
 
-    <section class = "container">
-
+    <section class = "container" style="margin-top: 10px;">
+        <% String tipoConsulta = request.getParameter("tipoConsulta");
+        if(tipoConsulta.equals("CODIGO")){
+            %>
+           <jsp:include page="WEB-INF/jspf/consulta/consultaCodigo.jsp"></jsp:include>     
+        <%}%>
+       
     </section>
 
     <jsp:include page="WEB-INF/jspf/footer.jspf"></jsp:include>
     </body>
 </html>
+
+
