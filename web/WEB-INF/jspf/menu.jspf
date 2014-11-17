@@ -12,7 +12,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li><a href="./AdicionarPecas">Adicionar Pe&ccedil;as</a></li>
+            <li><a href="./AdicionarPecas">Cadastrar Pe&ccedil;as</a></li>
             <li><a href="./RemoverPecas">Remover Pe&ccedil;as</a></li>
             <li><a href="./AlterarPecas">Alterar pe&ccedil;as</a></li>
             <li class="dropdown">
@@ -20,8 +20,8 @@
                 <ul class="dropdown-menu" role="menu">
 
                     <li><a href="./ConsultarPecas?tipoConsulta=CODIGO">Por c&oacute;digo</a></li>
-                    <li><a href="./ConsultarPecas?tipoConsulta=NOME+MODELO">Por nome + modelo</a></li>
-                    <li><a href="./ConsultarPecas?tipoConsulta=CATEGORIA+MODELO">Por categoria + modelo</a></li>
+                    <li><a href="./ConsultarPecas?tipoConsulta=NOMEMODELO">Por nome + modelo</a></li>
+                    <li><a href="./ConsultarPecas?tipoConsulta=CATEGORIAMODELO">Por categoria + modelo</a></li>
                 </ul>
             </li>
             <li class="dropdown">
