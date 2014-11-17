@@ -10,6 +10,8 @@ public class PecaBean implements java.io.Serializable {
     private String nome;
     private float peso;
     private float valor;
+    private FornecedorBean fornecedor;
+    private int quantidade;
 
     /**
      * @return the codigo
@@ -121,6 +123,34 @@ public class PecaBean implements java.io.Serializable {
      */
     public void setValor(float valor) {
         this.valor = valor;
+    }
+
+    /**
+     * @return the fornecedor
+     */
+    public FornecedorBean getFornecedor() {
+        return fornecedor;
+    }
+
+    /**
+     * @param fornecedor the fornecedor to set
+     */
+    public void setFornecedor(FornecedorBean fornecedor) {
+        this.fornecedor = fornecedor;
+    }
+
+    /**
+     * @return the quantidade
+     */
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    /**
+     * @param quantidade the quantidade to set
+     */
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
     
 }
