@@ -30,66 +30,60 @@
                     <div class="col-lg-12">
                         <div class="well well-lg">
                             <div class ="row">
-                                <div class="col-lg-12">
-                                    <form>
+                                <form>
+                                    <div class="col-lg-12">
+
                                         <div class="input-group">
                                             <span class="input-group-addon">Código*</span>
                                             <input type="text" class="form-control" style="width: 200px;" placeholder="Insira o código da peça">
                                             <span class="input-group-addon">Nome*</span>
                                             <input type="text" class="form-control" style="width: 500px;" placeholder="Insira o nome da peça">
                                         </div>
-                                </div>
-                                <div class="col-lg-10" style="margin-top:40px;">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">Categoria*</span>
-                                        <input type="text" class="form-control" style="width: 200px;" placeholder="Insira a categoria da peça">
-                                        <span class="input-group-addon">Modelo do veículo</span>
-                                        <input type="text" class="form-control" style="width: 200px;" placeholder="Insira o modelo de veículo da peça">
-
-                                        <span class="input-group-addon">Valor*</span>
-                                        <input type="text" class="form-control" style="width: 100px;" placeholder="Insira o valor da peça">
-
                                     </div>
-                                </div>
-                                <div class="col-lg-8" style="margin-top:40px;">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">Peso</span>
-                                        <input type="text" class="form-control" style="width: 200px;" placeholder="Insira o peso da peça">
-                                        <span class="input-group-addon">Dimensão</span>
-                                        <input type="text" class="form-control" style="width: 200px;" placeholder="Insira a dimensão da peça">
-
-                                    </div> 
-                                </div>
-                                <div class="col-lg-10" style="margin-top:40px;">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">Descrição</span>
-                                        <textarea name="comentário" rows="5" cols="10" class="form-control">Insira a descrição.</textarea>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-10" style="margin-top:40px;">
-                                    <form method="POST" enctype="multipart/form-data" action="fup.cgi">
+                                    <div class="col-lg-10" style="margin-top:40px;">
                                         <div class="input-group">
+                                            <span class="input-group-addon">Categoria*</span>
+                                            <input type="text" class="form-control" style="width: 200px;" placeholder="Insira a categoria da peça">
+                                            <span class="input-group-addon">Modelo do veículo</span>
+                                            <input type="text" class="form-control" style="width: 200px;" placeholder="Insira o modelo de veículo da peça">
 
-
-                                            Insira imagem:<input type="file" name="Insira imagem"><br/>
-
+                                            <span class="input-group-addon">Valor*</span>
+                                            <input type="text" class="form-control" style="width: 100px;" placeholder="Insira o valor da peça">
 
                                         </div>
-                                        <button type="submit" class="btn btn-default">Upload</button>
-                                    </form>
-                                </div> 
-                                <div class="col-lg-10" style="margin-top:40px; position: relative; margin-left: 860px;">
-                                    <button type="button" class="btn btn-default" style="color: #357ebd; background: #cde5ef;">Enviar</button>
-                               
-                                </div>
-                                 
-                                   </form>
-                                    
-                                    <div class="col-lg-12">
-                                        * Itens obrigatórios
                                     </div>
-                                 
+                                    <div class="col-lg-8" style="margin-top:40px;">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">Peso</span>
+                                            <input type="text" class="form-control" style="width: 200px;" placeholder="Insira o peso da peça">
+                                            <span class="input-group-addon">Dimensão</span>
+                                            <input type="text" class="form-control" style="width: 200px;" placeholder="Insira a dimensão da peça">
+
+                                        </div> 
+                                    </div>
+                                    <div class="col-lg-10" style="margin-top:40px;">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">Descrição</span>
+                                            <textarea name="comentário" rows="5" cols="10" class="form-control">Insira a descrição.</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-10" style="margin-top:40px;">
+                                        <div class="input-group">
+                                                Insira imagem:<input type="file" name="Insira imagem"><br/>
+                                        </div>
+                                    </div> 
+                                    <div class="col-lg-10" style="margin-top:40px; position: relative; margin-left: 860px;">
+                                        <button type="button" class="btn btn-default" style="color: #357ebd; background: #cde5ef;">Enviar</button>
+
+                                    </div>
+
+                                </form>
+
+                                <div class="col-lg-12">
+                                    * Itens obrigatórios
+                                </div>
+
                             </div>
                         </div>
                     </div>
