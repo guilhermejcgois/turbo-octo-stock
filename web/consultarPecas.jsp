@@ -38,6 +38,7 @@
         <%
         if(tipoConsulta.equals("CATEGORIAMODELO")){
             %>
+            
           <jsp:include page="WEB-INF/jspf/consulta/consultaCategoriaModelo.jsp"></jsp:include>
           <%}%>
        
