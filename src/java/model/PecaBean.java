@@ -12,6 +12,11 @@ public class PecaBean implements java.io.Serializable {
     private float valor;
     private FornecedorBean fornecedor;
     private int quantidade;
+    private String modeloVeiculo;
+
+    public PecaBean() {
+        quantidade = 0;
+    }
 
     /**
      * @return the codigo
@@ -151,6 +156,20 @@ public class PecaBean implements java.io.Serializable {
      */
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
+    }
+
+    /**
+     * @return the modeloVeiculo
+     */
+    public String getModeloVeiculo() {
+        return modeloVeiculo;
+    }
+
+    /**
+     * @param modeloVeiculo the modeloVeiculo to set
+     */
+    public void setModeloVeiculo(String modeloVeiculo) {
+        this.modeloVeiculo = modeloVeiculo;
     }
     
 }

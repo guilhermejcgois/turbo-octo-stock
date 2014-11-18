@@ -1,17 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
+import dao.PecaDao;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.CategoriaEnum;
+import model.PecaBean;
 
 /**
  *
@@ -72,7 +74,28 @@ public class CadastroPecaController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //RequestDispatcher dispatcher = request.getRequestDispatcher("AdicionarPecas");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Home");
+        PecaBean bean = new PecaBean();
+        
+        bean.setCategoria(CategoriaEnum.valueOf(request.getParameter("categoria")));
+        bean.setCodigo(request.getParameter("codigo"));
+        bean.setDescricao(request.getParameter("descricao"));
+        bean.setDimensao(request.getParameter("dimensao"));
+        bean.setImagem(request.getParameter("imagem"));
+        bean.setModeloVeiculo(request.getParameter("modelo"));
+        bean.setNome(request.getParameter("nome"));
+        bean.setPeso(Float.valueOf(request.getParameter("peso")));
+        bean.setValor(Float.valueOf(request.getParameter("valor")));
+        
+        try {
+            PecaDao dao = new PecaDao();
+            dao.salver(bean);
+        } catch (ClassNotFoundException | SQLException ex) {
+            response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        }
+        
+        dispatcher.forward(request, response);
     }
 
     /**

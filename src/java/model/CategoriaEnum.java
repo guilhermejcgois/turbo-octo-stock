@@ -9,6 +9,8 @@ public enum CategoriaEnum {
     ACESSORIO,
     BATERIA,
     ELETRICA,
-    MECANICA
+    MECANICA,
+    PNEUS_E_RODAS,
+    SUSPENSAO
     
 }

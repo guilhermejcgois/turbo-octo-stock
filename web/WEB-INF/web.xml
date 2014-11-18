@@ -9,6 +9,10 @@
         <servlet-class>controller.LoginController</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>CadastroPecaController</servlet-name>
+        <servlet-class>controller.CadastroPecaController</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>Faces Servlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
@@ -107,7 +111,11 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
-        <url-pattern>/LoginController</url-pattern>
+        <url-pattern>/Logando</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CadastroPecaController</servlet-name>
+        <url-pattern>/Cadastrando</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

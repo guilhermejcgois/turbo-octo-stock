@@ -38,152 +38,148 @@
                                 <h3 class="panel-title">Cadastro de pe&ccedilas</h3>
                             </div>
                             <div class="panel-body">
-                                <form method="post" id="formCadastroPecas" action="EfetuarCadastro" >
+                                <form method="post" id="formCadastroPecas" action="Home" >
                                     <div class ="row">
 
-                                        <div class="col-lg-12">
-                                            <div class="input-group">
-                                                <span class="input-group-addon">Código*</span>
-                                                <input id="txtCodigo" type="text" class="form-control" style="width: 200px;" placeholder="Insira o código da peça">
-                                                <span class="input-group-addon">Nome*</span>
-                                                <input id="txtNome" type="text" class="form-control" style="width: 500px;" placeholder="Insira o nome da peça">
+                                        <div class="col-lg-12" style="margin-top: 40px;">
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">Código*</span>
+                                                    <input id="txtCodigo" name="codigo" type="text" class="form-control" style="width: 218px;" placeholder="Insira o código da peça" required>
+                                                    <span class="input-group-addon">Nome*</span>
+                                                    <input id="txtNome" name="nome" type="text" class="form-control" style="width: 500px;" placeholder="Insira o nome da peça">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-10" style="margin-top:40px;">
+                                        <div class="col-lg-12" style="margin-top:40px;">
+                                            <div class="col-md-12"></div>
                                             <div class="input-group">
-                                                <span class="input-group-addon">Categoria*</span>
-                                                <input id="txtCategoria" type="text" class="form-control" style="width: 200px;" placeholder="Insira a categoria da peça">
+                                                <span class="input-group-addon">Categoria</span>
+                                                <select id="cmbCategoria" name="categoria" class="form-control" style="width: 200px;">
+                                                    <option value="ACESSORIO">Acessório</option>
+                                                    <option value="BATERIA">Bateria</option>
+                                                    <option value="ELETRICA">Elétrica</option>
+                                                    <option value="MECANICA0">Mecânica</option>
+                                                    <option value="PNEUS_E_RODAS">Pneus e Rodas</option>
+                                                    <option value="SUSPENSAO">Suspensão</option>
+                                                </select>
                                                 <span class="input-group-addon">Modelo do veículo</span>
-                                                <input id="txtModelo" type="text" class="form-control" style="width: 200px;" placeholder="Insira o modelo de veículo da peça">
+                                                <input id="txtModelo" name="modelo" type="text" class="form-control" style="width: 200px;" placeholder="Insira o modelo de veículo da peça">
 
                                                 <span class="input-group-addon">Valor*</span>
-                                                <input id="txtValor" type="text" class="form-control" style="width: 100px;" placeholder="Insira o valor da peça">
-
+                                                <input id="txtValor" name="valor" type="text" class="form-control" style="width: 100px;" placeholder="Insira o valor da peça">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-8" style="margin-top:40px;">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">Peso</span>
-                                            <input id="txtPeso" type="text" class="form-control" style="width: 200px;" placeholder="Insira o peso da peça">
-                                            <span class="input-group-addon">Dimensão</span>
-                                            <input id="txtDimensao" type="text" class="form-control" style="width: 200px;" placeholder="Insira a dimensão da peça">
-                                        </div> 
+                            
+                            <div class="col-lg-12" style="margin-top:40px;">
+                                <div class="col-md-11">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">Peso</span>
+                                        <input id="txtPeso" name="peso" type="text" class="form-control" style="width: 200px;" placeholder="Insira o peso da peça">
+                                        <span class="input-group-addon">Dimensão</span>
+                                        <input id="txtDimensao" name="dimensao" type="text" class="form-control" style="width: 200px;" placeholder="Insira a dimensão da peça">
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="col-lg-10" style="margin-top:40px;">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Descrição</span>
+                                    <textarea id="txtDescricao" name="comentario" rows="5" cols="10" class="form-control">Insira a descrição.</textarea>
+                                </div>
+
+                                <div class="col-lg-10" style="margin-top:40px;">
+                                    <div class="input-group">
+                                        Insira imagem:<input id="imagem" name="imagem" type="file"><br/>
                                     </div>
-                                    <div class="col-lg-10" style="margin-top:40px;">
-                                        <div class="input-group">
-                                            <span class="input-group-addon">Descrição</span>
-                                            <textarea id="txtDescricao" name="comentário" rows="5" cols="10" class="form-control">Insira a descrição.</textarea>
-                                        </div>
+                                </div> 
+                                <div class="col-lg-10" style="margin-top:40px; position: relative; margin-left: 860px;">
+                                    <button id="submit" type="button" class="btn btn-default" style="color: #357ebd; background: #cde5ef;">Enviar</button>
 
-                                        <div class="col-lg-10" style="margin-top:40px;">
-                                            <div class="input-group">
-                                                Insira imagem:<input id="imagem" type="file" name="Insira imagem"><br/>
-                                            </div>
-                                        </div> 
-                                        <div class="col-lg-10" style="margin-top:40px; position: relative; margin-left: 860px;">
-                                            <button id="button" type="button" class="btn btn-default" style="color: #357ebd; background: #cde5ef;">Enviar</button>
+                                </div>
 
-                                        </div>
+                                <div class="col-lg-12">
+                                    * Itens obrigatórios
+                                </div>
+                            </div>
+                            </form>
 
-                                        <div class="col-lg-12">
-                                            * Itens obrigatórios
-                                        </div>
-                                    </div>
-                                </form></div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-            </section>
+        </section>
 
-        <jsp:include page="WEB-INF/jspf/footer.jspf"></jsp:include>
+    <jsp:include page="WEB-INF/jspf/footer.jspf"></jsp:include>
 
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $("#txtCodigo").blur(function () {
-                    var element = $(this);
-                    if (element.val() === "") {
-                        element.removeClass("CampoValido");
-                        element.addClass("CampoInvalido");
-                        element.css({"border-color": "red"});
-                    } else {
-                        element.removeClass("CampoInvalido");
-                        element.addClass("CampoValido");
-                        element.css({"border-color": "green"});
-                    }
-                });
-
-                $("#txtNome").blur(function () {
-                    var element = $(this);
-                    if (element.val() === "") {
-                        element.removeClass("CampoValido");
-                        element.addClass("CampoInvalido");
-                        element.css({"border-color": "red"});
-                    } else {
-                        element.removeClass("CampoInvalido");
-                        element.addClass("CampoValido");
-                        element.css({"border-color": "green"});
-                    }
-                });
-
-                $("#txtCategoria").blur(function () {
-                    var element = $(this);
-                    if (element.val() === "") {
-                        element.removeClass("CampoValido");
-                        element.addClass("CampoInvalido");
-                        element.css({"border-color": "red"});
-                    } else {
-                        element.removeClass("CampoInvalido");
-                        element.addClass("CampoValido");
-                        element.css({"border-color": "green"});
-                    }
-                });
-
-                $("#txtValor").blur(function () {
-                    var element = $(this);
-                    if (element.val() === "") {
-                        element.removeClass("CampoValido");
-                        element.addClass("CampoInvalido");
-                        element.css({"border-color": "red"});
-                    } else {
-                        element.removeClass("CampoInvalido");
-                        element.addClass("CampoValido");
-                        element.css({"border-color": "green"});
-                    }
-                });
-
-                $("#submit").click(function () {
-                    var msgCamposObrigatorios = "Faltam preencher os seguintes campos:";
-                    var faltaCampo = false;
-
-                    if ($("#txtCodigo").val() === "") {
-                        msgCamposObrigatorios += "\n\tCódigo";
-                        faltaCampo = true;
-                    }
-
-                    if ($("#txtNome").val() === "") {
-                        msgCamposObrigatorios += "\n\tNome";
-                        faltaCampo = true;
-                    }
-
-                    if ($("#txtCategoria").val() === "") {
-                        msgCamposObrigatorios += "\n\tCategoria";
-                        faltaCampo = true;
-                    }
-
-                    if ($("#txtValor").val() === "") {
-                        msgCamposObrigatorios += "\n\tValor";
-                        faltaCampo = true;
-                    }
-
-                    if (faltaCampo) {
-                        alert(msgCamposObrigatorios);
-                    } else {
-                        $("#formCadastroPecas").submit();
-                    }
-                });
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#txtCodigo").blur(function () {
+                var element = $(this);
+                if (element.val() === "") {
+                    element.removeClass("CampoValido");
+                    element.addClass("CampoInvalido");
+                    element.css({"border-color": "red"});
+                } else {
+                    element.removeClass("CampoInvalido");
+                    element.addClass("CampoValido");
+                    element.css({"border-color": "green"});
+                }
             });
-        </script>
-    </body>
+
+            $("#txtNome").blur(function () {
+                var element = $(this);
+                if (element.val() === "") {
+                    element.removeClass("CampoValido");
+                    element.addClass("CampoInvalido");
+                    element.css({"border-color": "red"});
+                } else {
+                    element.removeClass("CampoInvalido");
+                    element.addClass("CampoValido");
+                    element.css({"border-color": "green"});
+                }
+            });
+
+            $("#txtValor").blur(function () {
+                var element = $(this);
+                if (element.val() === "") {
+                    element.removeClass("CampoValido");
+                    element.addClass("CampoInvalido");
+                    element.css({"border-color": "red"});
+                } else {
+                    element.removeClass("CampoInvalido");
+                    element.addClass("CampoValido");
+                    element.css({"border-color": "green"});
+                }
+            });
+
+            $("#submit").click(function () {
+                var msgCamposObrigatorios = "Faltam preencher os seguintes campos:";
+                var faltaCampo = false;
+
+                if ($("#txtCodigo").val() === "") {
+                    msgCamposObrigatorios += "\n\tCódigo";
+                    faltaCampo = true;
+                }
+
+                if ($("#txtNome").val() === "") {
+                    msgCamposObrigatorios += "\n\tNome";
+                    faltaCampo = true;
+                }
+
+                if ($("#txtValor").val() === "") {
+                    msgCamposObrigatorios += "\n\tValor";
+                    faltaCampo = true;
+                }
+
+                if (faltaCampo) {
+                    alert(msgCamposObrigatorios);
+                } else {
+                    $("#formCadastroPecas").submit();
+                }
+            });
+        });
+    </script>
+</body>
 </html>
